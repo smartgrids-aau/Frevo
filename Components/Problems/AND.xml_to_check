@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frevo SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+  <config>
+    <entry key="classdir" type="STRING" value="AND/and.and"/>
+    <entry key="classname" type="STRING" value="and.and.AND"/>
+	<entry key="name" type="STRING" value="AND"/>
+	<entry key="description" type="STRING" value="test and gate"/>
+	<entry key="image" type="STRING" value="AND.png"/>
+	<entry key="tags" type="STRING" value="AND TAG"/>
+  </config>
+  <properties>
+	<!-- Place your properties here -->
+  </properties>
+  <requirements>
+    <reqentry key="inputnumber" type="INT" value="2"/>
+    <reqentry key="outputnumber" type="INT" value="1"/>
+    <reqentry key="minimumCandidates" type="INT" value="1"/>
+    <reqentry key="maximumCandidates" type="INT" value="1"/>
+  </requirements>
+</icomponent>

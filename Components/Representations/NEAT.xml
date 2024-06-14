@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+	<config>
+		<entry key="classdir" type="STRING" value="NEAT//neat" />
+		<entry key="classname" type="STRING" value="neat.NEAT" />
+		<entry key="name" type="STRING" value="NEAT" />
+		<entry key="description" type="STRING"
+			value="Neuroevolution of augmenting topologies" />
+		<entry key="image" type="STRING" value="NEAT.png" />
+		<entry key="tags" type="STRING" value="NEAT TAG" />
+	</config>
+	<properties>
+		<propentry key="disjoint_coeff" type="FLOAT" value="1f" />
+		<propentry key="excess_coeff" type="FLOAT" value="1f" />
+		<propentry key="weight_coeff" type="FLOAT" value="0.4f" />
+		<propentry key="recursive" type="BOOLEAN" value="false" />
+		<propentry key="feature_selection" type="BOOLEAN"
+			value="false" />
+		<propentry key="max_perturbation" type="FLOAT" value="0.5f" />
+		<propentry key="max_bias_perturbation" type="FLOAT"
+			value="0.1f" />
+
+		<propentry key="add_node_prob" type="FLOAT" value="0.005f" />
+		<propentry key="add_link_prob" type="FLOAT" value="0.10f" />
+		<propentry key="mutate_node_weight_replaced_prob"
+			type="FLOAT" value="0.001f" />
+		<propentry key="mutate_link_toggle_prob" type="FLOAT"
+			value="0.1f" />
+		<propentry key="mutate_node_sf_prob" type="FLOAT"
+			value="0.1f" />
+		<propentry key="mutate_feature_prob" type="FLOAT"
+			value="0.1f" />
+		<propentry key="mutate_node_bias_prob" type="FLOAT"
+			value="0.1f" />
+		<propentry key="mutate_link_weight_prob" type="FLOAT"
+			value="0.6f" />
+	</properties>
+</icomponent>

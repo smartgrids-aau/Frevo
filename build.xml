@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="FREVO">
+    <property environment="env"/>
+    <property name="CreateScripts.location" value="../CreateScripts"/>
+    <property name="ECLIPSE_HOME" value="../../eclipse/java-2018-12/eclipse/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="8"/>
+    <property name="source" value="8"/>
+    <path id="FREVO.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="Components/Problems/Max_Traveler"/>
+        <pathelement location="Components/Problems/SimplifiedEmergencyExit"/>
+        <pathelement location="Components/Representations/MealyFSM"/>
+        <pathelement location="Components/Representations/NEAT"/>
+        <pathelement location="Components/Problems/CAM"/>
+        <pathelement location="Components/Problems/cDrones"/>
+        <pathelement location="Components/Problems/dDrones"/>
+        <pathelement location="Components/Problems/EmergencyExit"/>
+        <pathelement location="Components/Problems/EvoPCO"/>
+        <pathelement location="Components/Problems/EvoSynch"/>
+        <pathelement location="Components/Problems/InvertedPendulum"/>
+        <pathelement location="Components/Problems/Light"/>
+        <pathelement location="Components/Problems/SpiderinoSim"/>
+        <pathelement location="Components/Problems/nnracer"/>
+        <pathelement location="Components/Problems/Patterns"/>
+        <pathelement location="Components/Problems/RobotSoccer"/>
+        <pathelement location="Components/Problems/simsoccer"/>
+        <pathelement location="Components/Problems/SmartGrid"/>
+        <pathelement location="Components/Problems/ttt2"/>
+        <pathelement location="Components/Problems/ttt3"/>
+        <pathelement location="Components/Problems/XOR"/>
+        <pathelement location="Components/Methods/CEA2D"/>
+        <pathelement location="Components/Methods/CuckooSearch"/>
+        <pathelement location="Components/Methods/gaspecies"/>
+        <pathelement location="Components/Methods/nnga"/>
+        <pathelement location="Components/Methods/NoveltySearch"/>
+        <pathelement location="Components/Methods/NoveltySpecies"/>
+        <pathelement location="Components/Methods/RandomSearch"/>
+        <pathelement location="Components/Representations/CompleteNetwork"/>
+        <pathelement location="Components/Representations/FullyMeshedNet"/>
+        <pathelement location="Components/Problems/SimpleSoccer"/>
+        <pathelement location="Components/Representations/HebbNet"/>
+        <pathelement location="Components/Representations/LayeredNetwork"/>
+        <pathelement location="Components/Representations/FeedForwardNetwork"/>
+        <pathelement location="Components/Representations/SimpleBulkRepresentation"/>
+        <pathelement location="Components/Rankings/AbsoluteRanking"/>
+        <pathelement location="Components/Rankings/FullTournament"/>
+        <pathelement location="Components/Rankings/MultiSort"/>
+        <pathelement location="Components/Rankings/MultiSwiss"/>
+        <pathelement location="Components/Rankings/NoveltyRanking"/>
+        <pathelement location="Components/Rankings/SwissSystem"/>
+        <pathelement location="Components/Problems/CIPI"/>
+        <pathelement location="Components/Methods/PSO"/>
+        <pathelement location="Components/Representations/DebuggingRepresentation"/>
+        <pathelement location="Components/Problems/SinglePong"/>
+        <pathelement location="Libraries/JProwler/jprowler_v1_0.jar"/>
+        <pathelement location="Libraries/jafama/jodk.jar"/>
+        <pathelement location="Libraries/jgraphx/jgraphx.jar"/>
+        <pathelement location="Libraries/JFreeChart/jfreechart-1.0.17.jar"/>
+        <pathelement location="Libraries/JFreeChart/jcommon-1.0.21.jar"/>
+        <pathelement location="Libraries/resources.jar"/>
+        <pathelement location="Libraries/JGridMap/JGridMap.jar"/>
+        <pathelement location="Libraries/jchart2d-3.2.2/jchart2d-3.2.2.jar"/>
+        <pathelement location="Libraries/jlfgr/jlfgr-1_0.jar"/>
+        <pathelement location="Libraries/macify/macify-1.4.jar"/>
+        <pathelement location="Libraries/WhiteBoard/WhiteBoard.jar"/>
+        <pathelement location="Libraries/jaxen/jaxen-1.1.4.jar"/>
+        <pathelement location="Libraries/SimpleJSON/json-simple-1.1.1.jar"/>
+        <pathelement location="Libraries/Jung2/jung-algorithms-2.0.1.jar"/>
+        <pathelement location="Libraries/Jung2/jung-api-2.0.1.jar"/>
+        <pathelement location="Libraries/Jung2/jung-graph-impl-2.0.1.jar"/>
+        <pathelement location="Libraries/Jung2/jung-io-2.0.1.jar"/>
+        <pathelement location="Libraries/Jung2/jung-jai-2.0.1.jar"/>
+        <pathelement location="Libraries/Jung2/stax-api-1.0.1.jar"/>
+        <pathelement location="Libraries/Jung2/vecmath-1.3.1.jar"/>
+        <pathelement location="Libraries/Jung2/wstx-asl-3.2.6.jar"/>
+        <pathelement location="Libraries/Jung2/jung-visualization-2.0.1.jar"/>
+        <pathelement location="Libraries/Jung2/collections-generic-4.01.jar"/>
+        <pathelement location="Libraries/Jung2/colt-1.2.0.jar"/>
+        <pathelement location="Libraries/Jung2/concurrent-1.3.4.jar"/>
+        <pathelement location="Libraries/Jung2/j3d-core-1.3.1.jar"/>
+        <pathelement location="Libraries/Jung2/jung-3d-2.0.1.jar"/>
+        <pathelement location="Libraries/dom4j/dom4j-2.1.1.jar"/>
+        <pathelement location="Libraries/antlr/antlr-3.5.2-complete.jar"/>
+    </path>
+    <path id="run.FrevoMain.classpath">
+        <path refid="FREVO.classpath"/>
+        <pathelement location="Libraries/JProwler/jprowler_v1_0.jar"/>
+        <pathelement location="Libraries/jafama/jodk.jar"/>
+        <pathelement location="Libraries/jgraphx/jgraphx.jar"/>
+        <pathelement location="Libraries/JFreeChart/jfreechart-1.0.17.jar"/>
+        <pathelement location="Libraries/JFreeChart/jcommon-1.0.21.jar"/>
+        <pathelement location="Libraries/resources.jar"/>
+        <pathelement location="Libraries/JGridMap/JGridMap.jar"/>
+        <pathelement location="Libraries/jchart2d-3.2.2/jchart2d-3.2.2.jar"/>
+        <pathelement location="Libraries/jlfgr/jlfgr-1_0.jar"/>
+        <pathelement location="Libraries/macify/macify-1.4.jar"/>
+        <pathelement location="Libraries/WhiteBoard"/>
+        <pathelement location="Libraries/WhiteBoard/WhiteBoard.jar"/>
+        <pathelement location="Libraries/jaxen/jaxen-1.1.4.jar"/>
+        <pathelement location="Libraries/SimpleJSON/json-simple-1.1.1.jar"/>
+        <pathelement location="Libraries/Jung2/jung-api-2.0.1.jar"/>
+        <pathelement location="Libraries/Jung2/collections-generic-4.01.jar"/>
+        <pathelement location="Libraries/Jung2/colt-1.2.0.jar"/>
+        <pathelement location="Libraries/Jung2/concurrent-1.3.4.jar"/>
+        <pathelement location="Libraries/Jung2/jung-algorithms-2.0.1.jar"/>
+        <pathelement location="Libraries/Jung2/jung-graph-impl-2.0.1.jar"/>
+        <pathelement location="Libraries/Jung2/wstx-asl-3.2.6.jar"/>
+        <pathelement location="Libraries/Jung2/stax-api-1.0.1.jar"/>
+        <pathelement location="Libraries/Jung2/jung-io-2.0.1.jar"/>
+        <pathelement location="Libraries/Jung2/jung-visualization-2.0.1.jar"/>
+        <pathelement location="Libraries/Jung2/jung-jai-2.0.1.jar"/>
+        <pathelement location="Libraries/Jung2/vecmath-1.3.1.jar"/>
+        <pathelement location="Libraries/Jung2/j3d-core-1.3.1.jar"/>
+        <pathelement location="Libraries/Jung2/jung-3d-2.0.1.jar"/>
+        <pathelement location="Libraries/dom4j/dom4j-2.1.1.jar"/>
+        <pathelement location="Libraries/antlr/antlr-3.5.2-complete.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <mkdir dir="Components/Problems/Max_Traveler"/>
+        <mkdir dir="Components/Problems/SimplifiedEmergencyExit"/>
+        <mkdir dir="Components/Representations/MealyFSM"/>
+        <mkdir dir="Components/Representations/NEAT"/>
+        <mkdir dir="Components/Problems/CAM"/>
+        <mkdir dir="Components/Problems/cDrones"/>
+        <mkdir dir="Components/Problems/dDrones"/>
+        <mkdir dir="Components/Problems/EmergencyExit"/>
+        <mkdir dir="Components/Problems/EvoPCO"/>
+        <mkdir dir="Components/Problems/EvoSynch"/>
+        <mkdir dir="Components/Problems/InvertedPendulum"/>
+        <mkdir dir="Components/Problems/Light"/>
+        <mkdir dir="Components/Problems/SpiderinoSim"/>
+        <mkdir dir="Components/Problems/nnracer"/>
+        <mkdir dir="Components/Problems/Patterns"/>
+        <mkdir dir="Components/Problems/RobotSoccer"/>
+        <mkdir dir="Components/Problems/simsoccer"/>
+        <mkdir dir="Components/Problems/SmartGrid"/>
+        <mkdir dir="Components/Problems/ttt2"/>
+        <mkdir dir="Components/Problems/ttt3"/>
+        <mkdir dir="Components/Problems/XOR"/>
+        <mkdir dir="Components/Methods/CEA2D"/>
+        <mkdir dir="Components/Methods/CuckooSearch"/>
+        <mkdir dir="Components/Methods/gaspecies"/>
+        <mkdir dir="Components/Methods/nnga"/>
+        <mkdir dir="Components/Methods/NoveltySearch"/>
+        <mkdir dir="Components/Methods/NoveltySpecies"/>
+        <mkdir dir="Components/Methods/RandomSearch"/>
+        <mkdir dir="Components/Representations/CompleteNetwork"/>
+        <mkdir dir="Components/Representations/FullyMeshedNet"/>
+        <mkdir dir="Components/Problems/SimpleSoccer"/>
+        <mkdir dir="Components/Representations/HebbNet"/>
+        <mkdir dir="Components/Representations/LayeredNetwork"/>
+        <mkdir dir="Components/Representations/FeedForwardNetwork"/>
+        <mkdir dir="Components/Representations/SimpleBulkRepresentation"/>
+        <mkdir dir="Components/Rankings/AbsoluteRanking"/>
+        <mkdir dir="Components/Rankings/FullTournament"/>
+        <mkdir dir="Components/Rankings/MultiSort"/>
+        <mkdir dir="Components/Rankings/MultiSwiss"/>
+        <mkdir dir="Components/Rankings/NoveltyRanking"/>
+        <mkdir dir="Components/Rankings/SwissSystem"/>
+        <mkdir dir="Components/Problems/CIPI"/>
+        <mkdir dir="Components/Methods/PSO"/>
+        <mkdir dir="Components/Representations/DebuggingRepresentation"/>
+        <mkdir dir="Components/Problems/SinglePong"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+                <exclude name="**/.svn/"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Problems/Max_Traveler">
+            <fileset dir="Components/Problems/Max_Traveler">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Problems/SimplifiedEmergencyExit">
+            <fileset dir="Components/Problems/SimplifiedEmergencyExit">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Representations/MealyFSM">
+            <fileset dir="Components/Representations/MealyFSM">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Representations/NEAT">
+            <fileset dir="Components/Representations/NEAT">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Problems/CAM">
+            <fileset dir="Components/Problems/CAM">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Problems/cDrones">
+            <fileset dir="Components/Problems/cDrones">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Problems/dDrones">
+            <fileset dir="Components/Problems/dDrones">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Problems/EmergencyExit">
+            <fileset dir="Components/Problems/EmergencyExit">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Problems/EvoPCO">
+            <fileset dir="Components/Problems/EvoPCO">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Problems/EvoSynch">
+            <fileset dir="Components/Problems/EvoSynch">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Problems/InvertedPendulum">
+            <fileset dir="Components/Problems/InvertedPendulum">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Problems/Light">
+            <fileset dir="Components/Problems/Light">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Problems/SpiderinoSim">
+            <fileset dir="Components/Problems/SpiderinoSim">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Problems/nnracer">
+            <fileset dir="Components/Problems/nnracer">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Problems/Patterns">
+            <fileset dir="Components/Problems/Patterns">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Problems/RobotSoccer">
+            <fileset dir="Components/Problems/RobotSoccer">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Problems/simsoccer">
+            <fileset dir="Components/Problems/simsoccer">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Problems/SmartGrid">
+            <fileset dir="Components/Problems/SmartGrid">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Problems/ttt2">
+            <fileset dir="Components/Problems/ttt2">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Problems/ttt3">
+            <fileset dir="Components/Problems/ttt3">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Problems/XOR">
+            <fileset dir="Components/Problems/XOR">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Methods/CEA2D">
+            <fileset dir="Components/Methods/CEA2D">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Methods/CuckooSearch">
+            <fileset dir="Components/Methods/CuckooSearch">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Methods/gaspecies">
+            <fileset dir="Components/Methods/gaspecies">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Methods/nnga">
+            <fileset dir="Components/Methods/nnga">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Methods/NoveltySearch">
+            <fileset dir="Components/Methods/NoveltySearch">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Methods/NoveltySpecies">
+            <fileset dir="Components/Methods/NoveltySpecies">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Methods/RandomSearch">
+            <fileset dir="Components/Methods/RandomSearch">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Representations/CompleteNetwork">
+            <fileset dir="Components/Representations/CompleteNetwork">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Representations/FullyMeshedNet">
+            <fileset dir="Components/Representations/FullyMeshedNet">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Problems/SimpleSoccer">
+            <fileset dir="Components/Problems/SimpleSoccer">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Representations/HebbNet">
+            <fileset dir="Components/Representations/HebbNet">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Representations/LayeredNetwork">
+            <fileset dir="Components/Representations/LayeredNetwork">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Representations/FeedForwardNetwork">
+            <fileset dir="Components/Representations/FeedForwardNetwork">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Representations/SimpleBulkRepresentation">
+            <fileset dir="Components/Representations/SimpleBulkRepresentation">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Rankings/AbsoluteRanking">
+            <fileset dir="Components/Rankings/AbsoluteRanking">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Rankings/FullTournament">
+            <fileset dir="Components/Rankings/FullTournament">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Rankings/MultiSort">
+            <fileset dir="Components/Rankings/MultiSort">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Rankings/MultiSwiss">
+            <fileset dir="Components/Rankings/MultiSwiss">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Rankings/NoveltyRanking">
+            <fileset dir="Components/Rankings/NoveltyRanking">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Rankings/SwissSystem">
+            <fileset dir="Components/Rankings/SwissSystem">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Problems/CIPI">
+            <fileset dir="Components/Problems/CIPI">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Methods/PSO">
+            <fileset dir="Components/Methods/PSO">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Representations/DebuggingRepresentation">
+            <fileset dir="Components/Representations/DebuggingRepresentation">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="Components/Problems/SinglePong">
+            <fileset dir="Components/Problems/SinglePong">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="Components/Problems/Pong">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="Components/Problems/querySched">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.xtend"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+        <delete dir="Components/Problems/Max_Traveler"/>
+        <delete dir="Components/Problems/SimplifiedEmergencyExit"/>
+        <delete dir="Components/Representations/MealyFSM"/>
+        <delete dir="Components/Representations/NEAT"/>
+        <delete dir="Components/Problems/CAM"/>
+        <delete dir="Components/Problems/cDrones"/>
+        <delete dir="Components/Problems/dDrones"/>
+        <delete dir="Components/Problems/EmergencyExit"/>
+        <delete dir="Components/Problems/EvoPCO"/>
+        <delete dir="Components/Problems/EvoSynch"/>
+        <delete dir="Components/Problems/InvertedPendulum"/>
+        <delete dir="Components/Problems/Light"/>
+        <delete dir="Components/Problems/SpiderinoSim"/>
+        <delete dir="Components/Problems/nnracer"/>
+        <delete dir="Components/Problems/Patterns"/>
+        <delete dir="Components/Problems/RobotSoccer"/>
+        <delete dir="Components/Problems/simsoccer"/>
+        <delete dir="Components/Problems/SmartGrid"/>
+        <delete dir="Components/Problems/ttt2"/>
+        <delete dir="Components/Problems/ttt3"/>
+        <delete dir="Components/Problems/XOR"/>
+        <delete dir="Components/Methods/CEA2D"/>
+        <delete dir="Components/Methods/CuckooSearch"/>
+        <delete dir="Components/Methods/gaspecies"/>
+        <delete dir="Components/Methods/nnga"/>
+        <delete dir="Components/Methods/NoveltySearch"/>
+        <delete dir="Components/Methods/NoveltySpecies"/>
+        <delete dir="Components/Methods/RandomSearch"/>
+        <delete dir="Components/Representations/CompleteNetwork"/>
+        <delete dir="Components/Representations/FullyMeshedNet"/>
+        <delete dir="Components/Problems/SimpleSoccer"/>
+        <delete dir="Components/Representations/HebbNet"/>
+        <delete dir="Components/Representations/LayeredNetwork"/>
+        <delete dir="Components/Representations/FeedForwardNetwork"/>
+        <delete dir="Components/Representations/SimpleBulkRepresentation"/>
+        <delete dir="Components/Rankings/AbsoluteRanking"/>
+        <delete dir="Components/Rankings/FullTournament"/>
+        <delete dir="Components/Rankings/MultiSort"/>
+        <delete dir="Components/Rankings/MultiSwiss"/>
+        <delete dir="Components/Rankings/NoveltyRanking"/>
+        <delete dir="Components/Rankings/SwissSystem"/>
+        <delete dir="Components/Problems/CIPI"/>
+        <delete dir="Components/Methods/PSO"/>
+        <delete dir="Components/Representations/DebuggingRepresentation"/>
+        <delete dir="Components/Problems/SinglePong"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <src path="Components/Problems/Pong"/>
+            <src path="Components/Problems/querySched"/>
+            <exclude name="**/.svn/"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Problems/Max_Traveler" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Problems/Max_Traveler"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Problems/SimplifiedEmergencyExit" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Problems/SimplifiedEmergencyExit"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Representations/MealyFSM" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Representations/MealyFSM"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Representations/NEAT" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Representations/NEAT"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Problems/CAM" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Problems/CAM"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Problems/cDrones" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Problems/cDrones"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Problems/dDrones" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Problems/dDrones"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Problems/EmergencyExit" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Problems/EmergencyExit"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Problems/EvoPCO" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Problems/EvoPCO"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Problems/EvoSynch" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Problems/EvoSynch"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Problems/InvertedPendulum" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Problems/InvertedPendulum"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Problems/Light" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Problems/Light"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Problems/SpiderinoSim" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Problems/SpiderinoSim"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Problems/nnracer" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Problems/nnracer"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Problems/Patterns" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Problems/Patterns"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Problems/RobotSoccer" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Problems/RobotSoccer"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Problems/simsoccer" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Problems/simsoccer"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Problems/SmartGrid" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Problems/SmartGrid"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Problems/ttt2" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Problems/ttt2"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Problems/ttt3" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Problems/ttt3"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Problems/XOR" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Problems/XOR"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Methods/CEA2D" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Methods/CEA2D"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Methods/CuckooSearch" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Methods/CuckooSearch"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Methods/gaspecies" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Methods/gaspecies"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Methods/nnga" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Methods/nnga"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Methods/NoveltySearch" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Methods/NoveltySearch"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Methods/NoveltySpecies" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Methods/NoveltySpecies"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Methods/RandomSearch" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Methods/RandomSearch"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Representations/CompleteNetwork" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Representations/CompleteNetwork"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Representations/FullyMeshedNet" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Representations/FullyMeshedNet"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Problems/SimpleSoccer" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Problems/SimpleSoccer"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Representations/HebbNet" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Representations/HebbNet"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Representations/LayeredNetwork" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Representations/LayeredNetwork"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Representations/FeedForwardNetwork" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Representations/FeedForwardNetwork"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Representations/SimpleBulkRepresentation" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Representations/SimpleBulkRepresentation"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Rankings/AbsoluteRanking" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Rankings/AbsoluteRanking"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Rankings/FullTournament" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Rankings/FullTournament"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Rankings/MultiSort" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Rankings/MultiSort"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Rankings/MultiSwiss" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Rankings/MultiSwiss"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Rankings/NoveltyRanking" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Rankings/NoveltyRanking"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Rankings/SwissSystem" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Rankings/SwissSystem"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Problems/CIPI" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Problems/CIPI"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Methods/PSO" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Methods/PSO"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Representations/DebuggingRepresentation" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Representations/DebuggingRepresentation"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="Components/Problems/SinglePong" includeantruntime="false" source="${source}" target="${target}">
+            <src path="Components/Problems/SinglePong"/>
+            <classpath refid="FREVO.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects">
+        <ant antfile="build.xml" dir="${CreateScripts.location}" inheritAll="false" target="clean"/>
+        <ant antfile="build.xml" dir="${CreateScripts.location}" inheritAll="false" target="build">
+            <propertyset>
+                <propertyref name="build.compiler"/>
+            </propertyset>
+        </ant>
+    </target>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="FrevoMain">
+        <java classname="main.FrevoMain" failonerror="true" fork="yes">
+            <classpath refid="run.FrevoMain.classpath"/>
+        </java>
+    </target>
+</project>

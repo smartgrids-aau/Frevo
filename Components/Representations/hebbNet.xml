@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+	<config>
+		<entry key="classdir" type="STRING" value="HebbNet/hebbNet" />
+		<entry key="classname" type="STRING" value="hebbNet.HebbNet" />
+		<entry key="name" type="STRING" value="HebNet" />
+		<entry key="description" type="STRING"
+			value="Fully connected, recurrent artificial neural network with hebbian learning. Each synapse weight is assigned a plasticity which defines its ability to learn. Plasticity and initial weights are evolved." />
+		<entry key="image" type="STRING" value="HebbNet.png" />
+		<entry key="tags" type="STRING" value="neural network" />
+	</config>
+	<properties>
+		<propentry key="hiddenNodes" type="INT" value="2" />
+		<propentry key="weight_range" type="FLOAT" value="2f" />
+		<propentry key="bias_range" type="FLOAT" value="2f" />
+		<propentry key="stepNumber" type="INT" value="2" />
+	</properties>
+</icomponent>

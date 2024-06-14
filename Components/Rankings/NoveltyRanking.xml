@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frevo SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+	<config>
+		<entry key="classdir" type="STRING"
+			value="NoveltyRanking/fehervari.noveltyranking" />
+		<entry key="classname" type="STRING"
+			value="fehervari.noveltyranking.NoveltyRanking" />
+		<entry key="name" type="STRING" value="NoveltyRanking" />
+		<entry key="description" type="STRING"
+			value="Ranks candidates based on their novelty in the behavior space instead of fitness" />
+		<entry key="image" type="STRING" value="NoveltyRanking.png" />
+		<entry key="tags" type="STRING" value="absolute" />
+	</config>
+	<properties>
+		<propentry key="initial_threshold" type="FLOAT" value="10f"
+			description="Initial novelty threshold." />
+	</properties>
+</icomponent>

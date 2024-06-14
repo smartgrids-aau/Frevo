@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frevo SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+	<config>
+		<entry key="classdir" type="STRING"
+			value="cDrones//components//cdrones" />
+		<entry key="classname" type="STRING"
+			value="components.cdrones.cdrones" />
+		<entry key="name" type="STRING" value="cDrones" />
+		<entry key="description" type="STRING"
+			value="A 2D simulated cDrones coverage scenario. Supports absolute fitness only." />
+		<entry key="image" type="STRING" value="cdrones.png" />
+		<entry key="tags" type="STRING" value="robots,drones" />
+	</config>
+	<properties>
+		<propentry key="number_of_drones" type="INT" value="5" />
+		<propentry key="cutofftime" type="INT" value="60000" />
+		<propentry key="obstaclepercentage" type="FLOAT"
+			value="0.15f" />
+		<propentry key="evalnumber" type="INT" value="100" />
+		<propentry key="numberofrandominputs" type="INT" value="0" />
+		<propentry key="randomstart" type="BOOLEAN" value="false" />
+		<propentry key="commFitness" type="BOOLEAN" value="false" />
+		<propentry key="basestep" type="INT" value="10" />
+		<propentry key="ControllerType" type="ENUM"
+			value="RANDOMWALKCONTROLLER"
+			enumName="components.cdrones.ControllerType" />
+		<propentry key="fieldWidthX" type="INT" value="200" />
+		<propentry key="fieldWidthY" type="INT" value="160" />
+		<propentry key="resolution" type="INT" value="10" />
+		<propentry key="commFitness" type="BOOLEAN" value="false" />
+		<propentry key="numberofdigits" type="INT" value="2" />
+	</properties>
+	<requirements>
+		<reqentry key="inputnumber" type="INT" value="8" />
+		<reqentry key="outputnumber" type="INT" value="2" />
+		<reqentry key="minimumCandidates" type="INT" value="1" />
+		<reqentry key="maximumCandidates" type="INT" value="1" />
+	</requirements>
+</icomponent>

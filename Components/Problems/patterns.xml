@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+  <config>
+    <entry key="classdir" type="STRING" value="Patterns/patterns"/>
+    <entry key="classname" type="STRING" value="patterns.Patterns"/>
+	<entry key="name" type="STRING" value="Patterns"/>
+	<entry key="description" type="STRING" value="A test problem to learn and predict a given sequence of digits"/>
+	<entry key="image" type="STRING" value="patterns.png"/>
+	<entry key="tags" type="STRING" value="numbers"/>
+  </config>
+  <properties>
+	<propentry key="numberofdigits" type="INT" value="8"/>
+	<propentry key="numberofteaching" type="INT" value="3"/>
+	<propentry key="numbersystem" type="INT" value="10"/>	
+	<propentry key="numberoftrainingpatterns" type="INT" value="100"/>	
+  </properties>
+  <requirements>
+    <reqentry key="inputnumber" type="INT" value="1"/>
+    <reqentry key="outputnumber" type="INT" value="1"/>
+    <reqentry key="minimumCandidates" type="INT" value="1"/>
+    <reqentry key="maximumCandidates" type="INT" value="1"/>
+  </requirements>
+</icomponent>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frevo SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+	<config>
+		<entry key="classdir" type="STRING"
+			value="NoveltySpecies/fehervari/noveltyspecies" />
+		<entry key="classname" type="STRING"
+			value="fehervari.noveltyspecies.NoveltySpecies" />
+		<entry key="name" type="STRING" value="NoveltySpecies" />
+		<entry key="description" type="STRING"
+			value="Novelty search on species of candidates. Based on the implementation of Lehman and Stanley" />
+		<entry key="image" type="STRING" value="NoveltySpecies.png" />
+		<entry key="tags" type="STRING" value="NoveltySpecies TAG" />
+	</config>
+	<properties>
+		<propentry key="populationsize" type="INT" value="50"
+			description="Size of a population." />
+		<propentry key="initial_compatibility_threshold"
+			type="FLOAT" value="0.5"
+			description="The initial compatibility threshold that determines the genetic closeness of two candidates." />
+		<propentry key="time_alive_minimum" type="INT" value="0"
+			description="Minimum time for being mature for selection or death in a specie." />
+		<propentry key="generations" type="INT" value="200"
+			description="Number of generations." />
+		<propentry key="save_interval" type="INT" value="0"
+			description="Number of generations between each save. Zero turns off regular saving." />
+		<propentry key="survival_threshold" type="FLOAT" value="0.4"
+			description="Factor for calculating the number of surviving offsprings." />
+
+		<propentry key="mutate_only_probablity" type="FLOAT"
+			value="0.3f"
+			description="Chance that only a mutation occurs instead of a crossover." />
+		<propentry key="interspecies_mate_rate" type="FLOAT"
+			value="0.001f"
+			description="Chance that mating happens only within species." />
+		<propentry key="mate_only_prob" type="FLOAT" value="0.2"
+			description="Chance that only mutation occurs" />
+
+	</properties>
+</icomponent>

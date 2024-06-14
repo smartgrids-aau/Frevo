@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frevo SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+  <config>
+	<entry key="author" type="STRING" value="Istvan Fehervari, Hinrich Arnoldt"/>
+	<entry key="version" type="STRING" value="1.00"/>
+    <entry key="classdir" type="STRING" value="RobotSoccer/fehervari.robotsoccer"/>
+    <entry key="classname" type="STRING" value="fehervari.robotsoccer.RobotSoccer"/>
+	<entry key="name" type="STRING" value="RobotSoccer"/>
+	<entry key="description" type="STRING" value="A simulated robot soccer using autonomous mobile robots."/>
+	<entry key="image" type="STRING" value="RobotSoccer.png"/>
+	<entry key="tags" type="STRING" value="RobotSoccer TAG"/>
+	<entry key="support_heterogeneity" type="BOOLEAN" value="true"/>
+  </config>
+  <properties>
+	<propentry key="playersPerTeam" type="INT" value="11" description="Number of players per team."/>
+	<propentry key="evaluation_time" type="INT" value="60" description="Defines the length of the game in seconds."/>
+	<propentry key="simulation_steps_per_second" type="INT" value="10" description="Number of timesteps calculated each real-time second."/>
+  </properties>
+  <requirements>
+    <reqentry key="inputnumber" type="INT" value="15"/>
+    <reqentry key="outputnumber" type="INT" value="4"/>
+    <reqentry key="minimumCandidates" type="INT" value="2"/>
+    <reqentry key="maximumCandidates" type="INT" value="2"/>
+  </requirements>
+</icomponent>

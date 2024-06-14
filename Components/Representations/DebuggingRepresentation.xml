@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+  <config>
+	<entry key="author" type="STRING" value="Sergii Zhevzhyk, Wilfried Elmenreich"/>
+	<entry key="version" type="STRING" value="1.00"/>
+	<entry key="classdir" type="STRING" value="DebuggingRepresentation/DebuggingRepresentation"/>
+	<entry key="classname" type="STRING" value="debuggingrepresentation.DebuggingRepresentation"/>
+	<entry key="name" type="STRING" value="DebuggingRepresentation"/>
+	<entry key="description" type="STRING" value="The controller which allows to debug the execution of your problem to find bug(s). It doesn't take in account the input values and produces output values using the random generator."/>
+	<entry key="image" type="STRING" value="DebuggingRepresentation.png"/>
+  </config>
+  <properties>
+	  <propentry key="seed" type="INT" value="12345" description="Number of neurons in the hidden layer."/>
+	  <propentry key="update_interval" type="INT" value="10" description="Interval for changing of output values."/>
+	  <propentry key="protocol_io" type="BOOLEAN" value="false" description="If true then the log information will be saved into file."/>
+	  <propentry key="protocol_log" type="STRING" value="debugging_representation.log" description="The name of the file for log results."/>
+  </properties>
+</icomponent>

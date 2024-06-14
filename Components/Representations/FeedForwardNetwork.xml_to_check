@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+  <config>
+	<entry key="author" type="STRING" value="Istvan Fehervari, Wilfried Elmenreich"/>
+	<entry key="version" type="STRING" value="1.00"/>
+    <entry key="classdir" type="STRING" value="FeedForwardNetwork/FeedForwardNetwork"/>
+    <entry key="classname" type="STRING" value="feedForwardNetwork.FeedForwardNetwork"/>
+	<entry key="name" type="STRING" value="N-layered feed-forward neural network"/>
+	<entry key="description" type="STRING" value="Feed-forward, non-recurrent artificial neural network with N hidden layers. Each hidden layer has the same number of neurons. Only weights and biases will change during evolution."/>
+	<entry key="image" type="STRING" value="feedForwardNetwork.png"/>
+	<entry key="tags" type="STRING" value="neural network"/>
+  </config>
+  <properties>
+	  <propentry key="hiddenNodes" type="INT" value="2" description="Number of neurons in all hidden layers."/>
+	  <propentry key="layers" type="INT" value="1" description="Number of hidden layers."/>
+	  <propentry key="weight_range" type="FLOAT" value="2f" description="Range of the inital randomly created weights."/>
+	  <propentry key="bias_range" type="FLOAT" value="2f" description="Range of the inital randomly created biases."/>
+	  <propentry key="stepNumber" type="INT" value="2" description="Number of times the whole network is executed before returning its output."/>
+	  <propentry key="activationFunction" type="ENUM" value="LINEAR" enumName="feedForwardNetwork.ActivationFunction" description="Defines the neuron's activation function."/>
+  </properties>
+</icomponent>

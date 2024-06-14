@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="**/.svn/" kind="src" path="src"/>
+	<classpathentry kind="src" path="Components/Rankings/FullTournament"/>
+	<classpathentry kind="src" output="Components/Problems/Max_Traveler" path="Components/Problems/Max_Traveler"/>
+	<classpathentry kind="src" output="Components/Problems/SimplifiedEmergencyExit" path="Components/Problems/SimplifiedEmergencyExit"/>
+	<classpathentry kind="src" output="Components/Representations/MealyFSM" path="Components/Representations/MealyFSM"/>
+	<classpathentry kind="src" output="Components/Representations/NEAT" path="Components/Representations/NEAT"/>
+	<classpathentry kind="src" output="Components/Problems/CAM" path="Components/Problems/CAM"/>
+	<classpathentry kind="src" output="Components/Problems/cDrones" path="Components/Problems/cDrones"/>
+	<classpathentry kind="src" output="Components/Problems/dDrones" path="Components/Problems/dDrones"/>
+	<classpathentry kind="src" output="Components/Problems/EmergencyExit" path="Components/Problems/EmergencyExit"/>
+	<classpathentry kind="src" output="Components/Problems/EvoPCO" path="Components/Problems/EvoPCO"/>
+	<classpathentry kind="src" output="Components/Problems/EvoSynch" path="Components/Problems/EvoSynch"/>
+	<classpathentry kind="src" output="Components/Problems/InvertedPendulum" path="Components/Problems/InvertedPendulum"/>
+	<classpathentry kind="src" output="Components/Problems/Light" path="Components/Problems/Light"/>
+	<classpathentry kind="src" output="Components/Problems/SpiderinoSim" path="Components/Problems/SpiderinoSim"/>
+	<classpathentry kind="src" output="Components/Problems/nnracer" path="Components/Problems/nnracer"/>
+	<classpathentry kind="src" output="Components/Problems/Patterns" path="Components/Problems/Patterns"/>
+	<classpathentry kind="src" output="Components/Problems/RobotSoccer" path="Components/Problems/RobotSoccer"/>
+	<classpathentry kind="src" output="Components/Problems/simsoccer" path="Components/Problems/simsoccer"/>
+	<classpathentry kind="src" output="Components/Problems/SmartGrid" path="Components/Problems/SmartGrid"/>
+	<classpathentry kind="src" output="Components/Problems/ttt2" path="Components/Problems/ttt2"/>
+	<classpathentry kind="src" output="Components/Problems/ttt3" path="Components/Problems/ttt3"/>
+	<classpathentry kind="src" output="Components/Problems/XOR" path="Components/Problems/XOR"/>
+	<classpathentry kind="src" output="Components/Methods/CEA2D" path="Components/Methods/CEA2D"/>
+	<classpathentry kind="src" output="Components/Methods/CuckooSearch" path="Components/Methods/CuckooSearch"/>
+	<classpathentry kind="src" output="Components/Methods/gaspecies" path="Components/Methods/gaspecies"/>
+	<classpathentry kind="src" output="Components/Methods/nnga" path="Components/Methods/nnga"/>
+	<classpathentry kind="src" output="Components/Methods/NoveltySearch" path="Components/Methods/NoveltySearch"/>
+	<classpathentry kind="src" output="Components/Methods/NoveltySpecies" path="Components/Methods/NoveltySpecies"/>
+	<classpathentry kind="src" output="Components/Methods/RandomSearch" path="Components/Methods/RandomSearch"/>
+	<classpathentry kind="src" output="Components/Representations/CompleteNetwork" path="Components/Representations/CompleteNetwork"/>
+	<classpathentry kind="src" output="Components/Representations/FullyMeshedNet" path="Components/Representations/FullyMeshedNet"/>
+	<classpathentry kind="src" output="Components/Problems/SimpleSoccer" path="Components/Problems/SimpleSoccer"/>
+	<classpathentry kind="src" output="Components/Representations/HebbNet" path="Components/Representations/HebbNet"/>
+	<classpathentry kind="src" output="Components/Representations/LayeredNetwork" path="Components/Representations/LayeredNetwork"/>
+	<classpathentry kind="src" output="Components/Representations/FeedForwardNetwork" path="Components/Representations/FeedForwardNetwork"/>
+	<classpathentry kind="src" output="Components/Representations/SimpleBulkRepresentation" path="Components/Representations/SimpleBulkRepresentation"/>
+	<classpathentry kind="src" output="Components/Rankings/AbsoluteRanking" path="Components/Rankings/AbsoluteRanking"/>
+	<classpathentry kind="src" output="Components/Rankings/MultiSort" path="Components/Rankings/MultiSort"/>
+	<classpathentry kind="src" output="Components/Rankings/MultiSwiss" path="Components/Rankings/MultiSwiss"/>
+	<classpathentry kind="src" output="Components/Rankings/NoveltyRanking" path="Components/Rankings/NoveltyRanking"/>
+	<classpathentry kind="src" output="Components/Rankings/SwissSystem" path="Components/Rankings/SwissSystem"/>
+	<classpathentry kind="src" output="Components/Problems/CIPI" path="Components/Problems/CIPI"/>
+	<classpathentry kind="src" output="Components/Methods/PSO" path="Components/Methods/PSO"/>
+	<classpathentry kind="src" output="Components/Representations/DebuggingRepresentation" path="Components/Representations/DebuggingRepresentation"/>
+	<classpathentry kind="src" output="Components/Problems/SinglePong" path="Components/Problems/SinglePong"/>
+	<classpathentry kind="src" path="Components/Problems/Pong"/>
+	<classpathentry kind="src" path="Components/Problems/querySched"/>
+	<classpathentry kind="src" output="Components/Problems/spiderino" path="Components/Problems/spiderino"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="Libraries/JProwler/jprowler_v1_0.jar"/>
+	<classpathentry kind="lib" path="Libraries/jafama/jodk.jar" sourcepath="Libraries/jafama/jodk_1_2_src.zip"/>
+	<classpathentry kind="lib" path="Libraries/jgraphx/jgraphx.jar"/>
+	<classpathentry kind="lib" path="Libraries/JFreeChart/jfreechart-1.0.17.jar"/>
+	<classpathentry kind="lib" path="Libraries/JFreeChart/jcommon-1.0.21.jar"/>
+	<classpathentry kind="lib" path="Libraries/JGridMap/JGridMap.jar"/>
+	<classpathentry kind="lib" path="Libraries/jchart2d-3.2.2/jchart2d-3.2.2.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://jchart2d.sourceforge.net/docs/javadoc"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="Libraries/jlfgr/jlfgr-1_0.jar"/>
+	<classpathentry kind="lib" path="Libraries/macify/macify-1.4.jar"/>
+	<classpathentry kind="lib" path="Libraries/WhiteBoard/WhiteBoard.jar"/>
+	<classpathentry kind="lib" path="Libraries/jaxen/jaxen-1.1.4.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://jaxen.codehaus.org/apidocs"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="Libraries/SimpleJSON/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="Libraries/Jung2/jung-algorithms-2.0.1.jar"/>
+	<classpathentry kind="lib" path="Libraries/Jung2/jung-api-2.0.1.jar"/>
+	<classpathentry kind="lib" path="Libraries/Jung2/jung-graph-impl-2.0.1.jar"/>
+	<classpathentry kind="lib" path="Libraries/Jung2/jung-io-2.0.1.jar"/>
+	<classpathentry kind="lib" path="Libraries/Jung2/jung-jai-2.0.1.jar"/>
+	<classpathentry kind="lib" path="Libraries/Jung2/stax-api-1.0.1.jar"/>
+	<classpathentry kind="lib" path="Libraries/Jung2/vecmath-1.3.1.jar"/>
+	<classpathentry kind="lib" path="Libraries/Jung2/wstx-asl-3.2.6.jar"/>
+	<classpathentry kind="lib" path="Libraries/Jung2/jung-visualization-2.0.1.jar"/>
+	<classpathentry kind="lib" path="Libraries/Jung2/collections-generic-4.01.jar"/>
+	<classpathentry kind="lib" path="Libraries/Jung2/colt-1.2.0.jar"/>
+	<classpathentry kind="lib" path="Libraries/Jung2/concurrent-1.3.4.jar"/>
+	<classpathentry kind="lib" path="Libraries/Jung2/j3d-core-1.3.1.jar"/>
+	<classpathentry kind="lib" path="Libraries/Jung2/jung-3d-2.0.1.jar"/>
+	<classpathentry kind="lib" path="Libraries/dom4j/dom4j-2.1.1.jar"/>
+	<classpathentry kind="lib" path="Libraries/antlr/antlr-3.5.2-complete.jar"/>
+	<classpathentry kind="lib" path="Libraries/frevo-circle-sim/frevo-circle-sim-0.0.1-SNAPSHOT-jar-with-dependencies.jar"/>
+	<classpathentry kind="lib" path="Libraries/resources.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

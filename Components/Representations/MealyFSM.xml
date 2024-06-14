@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+  <config>
+    <entry key="classdir" type="STRING" value="MealyFSM//fsm"/>
+    <entry key="classname" type="STRING" value="fsm.MealyFSM"/>
+	<entry key="name" type="STRING" value="MealyFSM"/>
+	<entry key="author" type="STRING" value="Agnes Pinter-Bartha"/>
+	<entry key="version" type="STRING" value="1.00"/>
+	
+	<entry key="description" type="STRING" value="Mealy finite state machine implementation. See &lt;a href=&quot;http://en.wikipedia.org/wiki/Mealy_machine&quot;&gt;wikipedia&lt;/a&gt; for more information.&lt;br&gt;&lt;br&gt;
+	    
+	    The following mutation operators can be set to mutate the FSM:&lt;br&gt;
+	    &lt;ul&gt;
+		&lt;li&gt; add a new state (&lt;code&gt;mutate_add_state_prob&lt;/code&gt;)&lt;/li&gt;
+	    &lt;li&gt; delete a state (&lt;code&gt;mutate_del_state_prob&lt;/code&gt;)&lt;/li&gt;
+		&lt;/ul&gt;
+		
+		Please mind, that you need to set &lt;code&gt;state_num_change_allowed &lt;/code&gt;to &lt;b&gt;true&lt;/b&gt; in order to enable these operators.&lt;br&gt;
+	    &lt;ul&gt;
+	    &lt;li&gt; delete a transition (&lt;code&gt;mutate_del_tr_prob&lt;/code&gt;)&lt;/li&gt;
+	    &lt;li&gt; modify initial state of FSM (&lt;code&gt;mutate_mod_init_state_prob&lt;/code&gt;)&lt;/il&gt; 
+	    &lt;li&gt; modify a transition's output (&lt;code&gt;mutate_mod_tr_output_prob&lt;/code&gt;) or next state (&lt;code&gt;mutate_mod_tr_nextstate_prob&lt;/code&gt;)&lt;/il&gt;
+	    &lt;li&gt; modify thresholds (&lt;code&gt;mutate_threshold_prob&lt;/code&gt;)&lt;/li&gt; 
+	    &lt;/ul&gt;
+	    
+		Shortly about problem related parameters:&lt;br&gt;
+		
+		&lt;ul&gt;
+	    &lt;li&gt; you need to set minimum and maximum values that can occur for each input 
+	    (&lt;code&gt;min_input_values&lt;/code&gt; and &lt;code&gt;max_input_values&lt;/code&gt;)&lt;/li&gt;
+		
+	    &lt;li&gt; set unit information for inputs(&lt;code&gt;unit_input_values&lt;/code&gt;), 
+	    outputs (&lt;code&gt;output_units&lt;/code&gt;) and thresholds (&lt;code&gt;threshold_units&lt;/code&gt;)&lt;/li&gt;
+	    &lt;li&gt; for setting how many thresholds should be used for each input, set the &lt;code&gt;nthresholds_for_inputs&lt;/code&gt; parameter.
+	    Use 0 in case you do not want the input to be thresholded. In this case there is a risk that there will be an increase in the number of transitions.
+	    &lt;/ul&gt; Use 1 in case you would like to transform the input values into binary values.
+	    
+	    &lt;br&gt;	    	    
+	    An update is planned in the near future, too ease up problem-depenent parameter setups.
+		
+	    "/>
+	<entry key="image" type="STRING" value="MealyFSM.png"/>
+	<entry key="tags" type="STRING" value="MealyFSM TAG"/>
+  </config>
+  <properties>
+	<propentry key="num_of_states" type="INT" value="6" description="Number of states the initial FSM has."/>
+	<propentry key="state_num_change_allowed" type="BOOLEAN" value="false" description="If true, number of states can change during evolution. Set this to false, if you want to evolve a fixed-state FSM."/>
+	<propentry key="generation_mode" type="ENUM" value="RANDOM" enumName="fsm.GenerationMode" description="Sets generation mode for newly created FSMs. Currently we support random generation and SIMAO generation. The latter one ensures that the result FSM is connected, meaning each state is reachable."/>
+	<propentry key="distance_calc_method" type="ENUM" value="HAMMING_DISTANCE" enumName="fsm.DistanceCalc" description="Distance calculation method used for measuring differencies between two FSM. Currently Hamming distance and Maximum equal prefix can be used."/>
+	<propentry key="min_input_values" type="INTARRAY" value="0,0" description="Minimal values for all inputs, separated by a comma (,)."/>
+	<propentry key="max_input_values" type="INTARRAY" value="70,70" description="Maximal values for all inputs, separated by a comma (,)."/>
+	<propentry key="unit_input_values" type="INTARRAY" value="70,70" description="Units for all inputs, separated by a comma (,)."/>
+	<propentry key="threshold_units" type="INTARRAY" value="100,100" description="Using this parameter you can specify the unit  to be used for generating threshold values for each input."/>
+	<propentry key="nthresholds_for_inputs" type="INTARRAY" value="3,3" description="Number of thresholds for each input, separated by a comma (,). Use 0 if you do not want an input to be thresholded."/>
+	<propentry key="output_units" type="INT" value="100" description="This parameter sets the units for the generated values. By setting a higher value, we can produce more finer outputs (e.g. instead of 0.1, one could find a 0.12 output value)."/>
+	<propentry key="mutate_add_state_prob" type="FLOAT" value="0f" description="Probability of adding a new state."/>
+	<propentry key="mutate_mod_tr_nextstate_prob" type="FLOAT" value="0.01f" description="Probability of modifying a transition's next state."/>
+	<propentry key="mutate_mod_tr_output_prob" type="FLOAT" value="0.01f" description="Probability of modifying a transition's output."/>
+	<propentry key="mutate_mod_init_state_prob" type="FLOAT" value="0.01f" description="Probability of modifying initial state."/>
+	<propentry key="mutate_del_state_prob" type="FLOAT" value="0f" description="Probability of deleting a state."/>
+	<propentry key="mutate_del_tr_prob" type="FLOAT" value="0.01f" description="Probability of deleting a transition." />
+	<propentry key="mutate_threshold_prob" type="FLOAT" value="0.01f" description="Probability of mutating the treshold value."/>
+  </properties>
+</icomponent>

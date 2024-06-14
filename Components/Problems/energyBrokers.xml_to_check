@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+  <config>
+    <entry key="classdir" type="STRING" value="EnergyBrokers/brokerage"/>
+    <entry key="classname" type="STRING" value="brokerage.Market"/>
+	<entry key="name" type="STRING" value="Energy brokerage for Smart Microgrids"/>
+	<entry key="description" type="STRING" value="Defines a broker that intermediates the power provisioning for Smart Microgrids"/>
+	<entry key="image" type="STRING" value="hems.png"/>
+	<entry key="tags" type="STRING" value="HEMS EnergyManagement SmartHome SmartGrid LocalGeneration RenewableEnergy"/>
+  </config>
+  <properties>
+  		<propentry key="money_symbol" type="STRING" value="EUR"/>
+  		<propentry key="market_start_time" type="STRING" value="2015 1 1 07:00:00"/>
+  		<propentry key="simulation_duration" type="INT" value="86400"/>
+  		<propentry key="allocation_length" type="INT" value="1"/>
+  		<propentry key="limit_price" type="FLOAT" value="1.0"/>
+  		<propentry key="broker_type" type="ENUM" value="ANN_B" enumName="brokerage.BType" description="Defines the controller model. Can be evolved and static (for comparison)."/>
+		<propentry key="grid_type" type="INT" value="0"/>
+  		<propentry key="weather_type" type="INT" value="0"/>
+  		<propentry key="incremental_evolution" type="BOOLEAN" value="false"/>
+  		<propentry key="reimbursement_penalty" type="FLOAT" value="1000.0"/>
+  </properties>
+  <requirements>
+    <reqentry key="inputnumber" type="INT" value="6"/>
+    <reqentry key="outputnumber" type="INT" value="7"/>
+    <reqentry key="minimumCandidates" type="INT" value="1"/>
+    <reqentry key="maximumCandidates" type="INT" value="1"/>
+  </requirements>
+</icomponent>

@@ -1,0 +1,36 @@
+<!--
+DTD for FREVO AbstractComponent
+Version: Development 0.1
+by Istvan Fehervari
+-->
+
+<!ELEMENT icomponent (config,properties,requirements*) >
+
+<!ELEMENT config (entry)+ >
+
+<!ELEMENT entry EMPTY >
+
+<!ATTLIST entry
+		key CDATA #REQUIRED
+		type CDATA #REQUIRED
+		value CDATA #REQUIRED >
+		
+<!ELEMENT properties (propentry*) >
+
+<!ELEMENT propentry EMPTY >
+
+<!ATTLIST propentry
+		key CDATA #REQUIRED
+		type CDATA #REQUIRED
+		value CDATA #REQUIRED
+		enumName CDATA #IMPLIED
+		description CDATA #IMPLIED >
+		
+<!ELEMENT requirements (reqentry*) >
+
+<!ELEMENT reqentry EMPTY >
+
+<!ATTLIST reqentry
+		key CDATA #REQUIRED
+		type CDATA #REQUIRED
+		value CDATA #REQUIRED >		

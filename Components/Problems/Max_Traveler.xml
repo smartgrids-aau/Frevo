@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frevo SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+  <config>
+    <entry key="classdir" type="STRING" value="Max_Traveler/Max_Traveler"/>
+    <entry key="classname" type="STRING" value="Max_Traveler.Max_Traveler"/>
+	<entry key="name" type="STRING" value="Max_Traveler"/>
+	<entry key="description" type="STRING" value="This is a simulation where seven Robots are in a quadratic arena and try to drive as far as possible without
+hitting an obstacle"/>
+	<entry key="image" type="STRING" value="Max_Traveler.png"/>
+	<entry key="tags" type="STRING" value="Max_Traveler TAG"/>
+  </config>
+  <properties>
+	<propentry key="numSteps" type="INT" value="500"/>
+	<propentry key="serverAddress" type="STRING" value="127.0.0.1"/>
+  </properties>
+  <requirements>
+    <reqentry key="inputnumber" type="INT" value="24"/>
+    <reqentry key="outputnumber" type="INT" value="2"/>
+    <reqentry key="minimumCandidates" type="INT" value="1"/>
+    <reqentry key="maximumCandidates" type="INT" value="1"/>
+  </requirements>
+</icomponent>

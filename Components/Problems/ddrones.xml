@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+	<config>
+		<entry key="classdir" type="STRING"
+			value="dDrones//components//ddrones" />
+		<entry key="classname" type="STRING"
+			value="components.ddrones.ddrones" />
+		<entry key="name" type="STRING" value="dDrones" />
+		<entry key="description" type="STRING"
+			value="A discrete 2D simulated dDrones coverage scenario. Supports absolute fitness only." />
+		<entry key="image" type="STRING" value="ddrones.png" />
+		<entry key="tags" type="STRING" value="robots,drones" />
+	</config>
+	<properties>
+		<propentry key="number_of_drones" type="INT" value="5" />
+		<propentry key="cutofftime" type="INT" value="60000" />
+		<propentry key="obstaclepercentage" type="INT" value="15" />
+		<propentry key="evalnumber" type="INT" value="100" />
+		<propentry key="gridwidth" type="INT" value="10" />
+		<propentry key="gridheight" type="INT" value="10" />
+		<propentry key="controller" type="ENUM"
+			value="Evolved_cooperative_4_sensors"
+			enumName="components.ddrones.ControllerModel"
+			description="Defines the controller model. Can be evolved and static (for comparison)." />
+	</properties>
+	<requirements>
+		<reqentry key="inputnumber" type="INT" value="4" />
+		<reqentry key="outputnumber" type="INT" value="2" />
+		<reqentry key="minimumCandidates" type="INT" value="1" />
+		<reqentry key="maximumCandidates" type="INT" value="1" />
+	</requirements>
+</icomponent>

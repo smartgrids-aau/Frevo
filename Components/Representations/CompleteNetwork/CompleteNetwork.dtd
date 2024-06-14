@@ -1,0 +1,21 @@
+<!--
+DTD for Loading template for CompleteNetwork saves
+Version: Development 0.1
+by Istvan Fehervari
+-->
+
+<!ELEMENT CompleteNetwork (completenetwork) >
+
+<!ELEMENT completenetwork (nodes) >
+
+<!ATTLIST completenetwork
+		input_nodes CDATA #REQUIRED 
+		output_nodes CDATA #REQUIRED
+		nodes CDATA #REQUIRED
+		weight_range CDATA #REQUIRED
+		bias_range CDATA #REQUIRED >
+
+<!ELEMENT nodes (node)+ >
+
+<!ELEMENT node EMPTY >
+

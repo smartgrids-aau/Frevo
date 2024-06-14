@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+	<config>
+		<entry key="author" type="STRING"
+			value="Istvan Fehervari, Wilfried Elmenreich, Andreas Pfandler" />
+		<entry key="version" type="STRING" value="1.00" />
+		<entry key="classdir" type="STRING"
+			value="FullyMeshedNet/fullyMeshedNet" />
+		<entry key="classname" type="STRING"
+			value="fullyMeshedNet.FullyMeshedNet" />
+		<entry key="name" type="STRING" value="FullyMeshedNet" />
+		<entry key="description" type="STRING"
+			value="Recurrent fully meshed neural network. Modeling of the genom also includes the mutation parameters which are then co-evolved. If random_source is enabled, each neuron has also a random bias, allowing for probabilistic decisions." />
+		<entry key="image" type="STRING" value="FullyMeshedNet.png" />
+	</config>
+	<properties>
+		<propentry key="hiddenNodes" type="INT" value="2"
+			description="Number of neurons in the hidden layer." />
+		<propentry key="weight_range" type="FLOAT" value="2f"
+			description="Range of the inital randomly created weights." />
+		<propentry key="bias_range" type="FLOAT" value="2f"
+			description="Range of the inital randomly created biases." />
+		<propentry key="iterations" type="INT" value="2"
+			description="Number of times the whole network is executed before returning its output." />
+		<propentry key="random_source" type="BOOLEAN" value="false"
+			description="If enabled, each neuron has also a random bias, allowing for probabilistic decisions." />
+		<propentry key="random_bias_range" type="FLOAT" value="0.2f"
+			description="Range for random changes for each random bias value." />
+		<propentry key="variable_mutation_rate" type="BOOLEAN"
+			value="false"
+			description="If enabled, the mutation range adaptively changes during evolution." />
+		<propentry key="mutation_rate" type="FLOAT" value="0.2f"
+			description="Range for random changes for each weight and bias value." />
+		<propentry key="activationFunction" type="ENUM"
+			value="LINEAR" enumName="fullyMeshedNet.ActivationFunction"
+			description="Defines the neuron's activation function." />
+	</properties>
+</icomponent>

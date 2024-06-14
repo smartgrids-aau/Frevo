@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+	<config>
+		<entry key="classdir" type="STRING" value="nnracer/nnracer" />
+		<entry key="classname" type="STRING" value="nnracer.NNRacer" />
+		<entry key="name" type="STRING" value="NNRacer" />
+		<entry key="description" type="STRING"
+			value="A game where a race car driver should overtake slower cars by selecting the proper lane." />
+		<entry key="image" type="STRING" value="nnracer.png" />
+		<entry key="tags" type="STRING" value="game,cars" />
+	</config>
+	<properties>
+		<propentry key="laneNumber" type="INT" value="3" />
+		<propentry key="lookAhead" type="INT" value="1" />
+		<propentry key="carProbability" type="FLOAT" value="0.5" />
+		<propentry key="maxOvertakeNumber" type="INT" value="300" />
+		<propentry key="evaluationTimes" type="INT" value="3" />
+	</properties>
+	<requirements>
+		<reqentry key="inputnumber" type="INT" value="4" />
+		<reqentry key="outputnumber" type="INT" value="1" />
+		<reqentry key="minimumCandidates" type="INT" value="1" />
+		<reqentry key="maximumCandidates" type="INT" value="1" />
+	</requirements>
+</icomponent>

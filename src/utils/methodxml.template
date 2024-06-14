@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frevo SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+  <config>
+    <entry key="classdir" type="STRING" value="TEMPCLASSDIR"/>
+    <entry key="classname" type="STRING" value="PACKAGE.TEMP"/>
+	<entry key="name" type="STRING" value="TEMP"/>
+	<entry key="description" type="STRING" value="TDESC"/>
+	<entry key="image" type="STRING" value="TEMP.png"/>
+	<entry key="tags" type="STRING" value="TEMP TAG"/>
+  </config>
+  <properties>
+	<!-- Place your properties here -->
+  </properties>
+</icomponent>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frevo SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+  <config>
+    <entry key="classdir" type="STRING" value="LayeredNetwork/multiLayerNetwork"/>
+    <entry key="classname" type="STRING" value="multiLayerNetwork.MultiLayerNetwork"/>
+	<entry key="name" type="STRING" value="Multi layered neural network"/>
+	<entry key="description" type="STRING" value="Feed-forward neural network with multiple hidden layers. Extension of three layered neural network"/>
+	<entry key="image" type="STRING" value="Multi layered neural network.png"/>
+	<entry key="tags" type="STRING" value="Multi layered neural network TAG"/>
+  </config>
+  <properties>
+	<propentry key="hidden_layers" type="INT" value="2"
+		description="Number of hidden layers." />
+		<propentry key="nodes_per_layer" type="INT" value="2"
+		description="Number of neurons per hidden layer." />
+	<propentry key="weight_range" type="FLOAT" value="2f"
+		description="Range of the inital randomly created weights." />
+	<propentry key="bias_range" type="FLOAT" value="2f"
+		description="Range of the inital randomly created biases." />
+	<propentry key="stepNumber" type="INT" value="1"
+		description="Number of times the whole network is executed before returning its output." />
+  </properties>
+</icomponent>

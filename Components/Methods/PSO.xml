@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+  <config>
+    <entry key="author" type="STRING" value="Sergii Zhevzhyk"/>
+	<entry key="version" type="STRING" value="1.00"/>
+    <entry key="classdir" type="STRING" value="PSO/PSO"/>
+    <entry key="classname" type="STRING" value="pso.PSO"/>
+	<entry key="name" type="STRING" value="PSO"/>
+	<entry key="description" type="STRING" value="Particle Swarm Optimization(PSO).  PSO is originally attributed to Kennedy, Eberhart and Shi"></entry>
+	<entry key="image" type="STRING" value="PSO.png"/>
+	<entry key="tags" type="STRING" value="PSO particle swarm"/>
+  </config>
+  <properties>
+      <propentry key="generations" type="INT" value="200" description="Number of generations." />
+      <propentry key="populationsize" type="INT" value="100" description="Size of a population."/>
+      <propentry key="W" type="FLOAT" value="0.7f" description="Inertia weight"/>
+      <propentry key="C1" type="FLOAT" value="2.4f" description="Cognitive learning rate or tendency to return to personal best position. Should be positive number"/>
+      <propentry key="C2" type="FLOAT" value="2.1f" description="Social learning rate or tendency to move towards the swarm best position. Should be positive number"/>
+  </properties>
+</icomponent>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+  <config>
+    <entry key="classdir" type="STRING" value="EmergencyExit/emergencyexit"/>
+    <entry key="classname" type="STRING" value="emergencyexit.EmergencyExit"/>
+	<entry key="name" type="STRING" value="Emergency Exit"/>
+	<entry key="description" type="STRING" value="A simulation where multiple Agents try to find the Emergency Exit"/>
+	<entry key="image" type="STRING" value="EmergencyExit.png"/>
+  </config>
+  <properties>
+    <propentry key="fieldsource" type="ENUM" value="FIELD_FROM_FILE" enumName="emergencyexit.FieldSource" description="If this is set to FIELD_FROM_FILE a field is loaded from the file that is defined in Filename. Else all the other values are used to create a field where the positions of the Emergencyexits, the Blockades and the Agents are defined by random."/>
+	<propentry key="steps" type="INT" value="50" description=""/>
+	<propentry key="width" type="INT" value="20"/>
+	<propentry key="height" type="INT" value="20"/>
+	<propentry key="seedforEmergencyExits" type="INT" value="0"/>
+	<propentry key="NumberofAgents" type="INT" value="10"/>
+	<propentry key="NumberofEmergencyExits" type="INT" value="5"/>
+	<propentry key="NumberofBlockades" type="INT" value="20"/>
+	<propentry key="NumberofEvaluations" type="INT" value="10"/>
+	<propentry key="Filename" type="FILE" value="Components/Problems/EmergencyExit/emergencyexit/Stadium.ser"/>
+	<propentry key="length_of_timestep_ms" type="INT" value="200" description="The length of one simulation step in milliseconds." />
+  </properties>
+  <requirements>
+    <reqentry key="inputnumber" type="INT" value="10"/>
+    <reqentry key="outputnumber" type="INT" value="2"/>
+    <reqentry key="minimumCandidates" type="INT" value="1"/>
+    <reqentry key="maximumCandidates" type="INT" value="1"/>
+  </requirements>
+</icomponent>

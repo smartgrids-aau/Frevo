@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+	<config>
+		<entry key="classdir" type="STRING" value="MultiSort/MultiSort" />
+		<entry key="classname" type="STRING" value="MultiSort.MultiSort" />
+		<entry key="name" type="STRING" value="MultiSort" />
+		<entry key="description" type="STRING"
+			value="A sorting algorithm which ranks by always evaluating a group of randomly selected entities where each entity will be selected with equal times." />
+		<entry key="image" type="STRING" value="multisort.png" />
+		<entry key="tags" type="STRING" value="tournament" />
+	</config>
+	<properties>
+		<propentry key="evaluation_times" type="INT" value="10" />
+	</properties>
+</icomponent>

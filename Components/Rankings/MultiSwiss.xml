@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frevo SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+	<config>
+		<entry key="classdir" type="STRING"
+			value="MultiSwiss/MultiSwiss" />
+		<entry key="classname" type="STRING"
+			value="MultiSwiss.MultiSwiss" />
+		<entry key="name" type="STRING" value="MultiSwiss" />
+		<entry key="description" type="STRING"
+			value="This ranking method is for evaluating a canditate pool using competitive multiplayer games. It also supports two player games. It applies a Swiss-style pairung system as described in https://www.wizards.com/dci/downloads/RISK2210Swiss.pdf" />
+		<entry key="image" type="STRING" value="MultiSwiss.png" />
+		<entry key="tags" type="STRING" value="MultiSwiss TAG" />
+	</config>
+	<properties>
+		<!-- Place your properties here -->
+	</properties>
+</icomponent>

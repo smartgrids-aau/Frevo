@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frevo SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+  <config>
+    <entry key="classdir" type="STRING" value="CuckooSearch/frevo/cuckoosearch"/>
+    <entry key="classname" type="STRING" value="frevo.cuckoosearch.CuckooSearch"/>
+	<entry key="name" type="STRING" value="CuckooSearch"/>
+	<entry key="description" type="STRING" value="Cuckoo search based on the work from Yang and Deb: &lt;a href=&quot;http://arxiv.org/pdf/1003.1594.pdf&quot;&gt;Cuckoo search via Lévy flights&lt;/a&gt;"/>
+	<entry key="image" type="STRING" value="cuckoosearch.png"/>
+	<entry key="tags" type="STRING" value="CuckooSearch TAG"/>
+  </config>
+  <properties>
+	<propentry key="number_of_nests" type="INT" value="50" description="Number of nests during the simulation."/>
+	<propentry key="discovery_rate" type="FLOAT" value="0.25" description="Discovery rate of alien eggs."/>
+	<propentry key="generations" type="INT" value="200" description="Number of generations."/>
+  </properties>
+</icomponent>

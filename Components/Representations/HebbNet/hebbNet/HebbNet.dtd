@@ -1,0 +1,21 @@
+<!--
+DTD for Loading template for HebbNet saves
+Version: Development 0.1
+by Wilfried Elmenreich
+-->
+
+<!ELEMENT HebbNet (hebbnet) >
+
+<!ELEMENT hebbnet (nodes) >
+
+<!ATTLIST hebbnet
+		input_nodes CDATA #REQUIRED 
+		output_nodes CDATA #REQUIRED
+		nodes CDATA #REQUIRED
+		weight_range CDATA #REQUIRED
+		bias_range CDATA #REQUIRED >
+
+<!ELEMENT nodes (node)+ >
+
+<!ELEMENT node EMPTY >
+

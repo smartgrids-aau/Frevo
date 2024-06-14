@@ -1,0 +1,22 @@
+package PACKAGENAME;
+
+import core.AbstractSingleProblem;
+import core.AbstractRepresentation;
+
+public class TEMP extends AbstractSingleProblem {
+
+	@Override
+	/** Evaluates the given representation by calculating its corresponding fitness value. A higher fitness means better performance.<br>
+	 * @param candidate The candidate solution to be evaluated.
+	 * @return the corresponding fitness value. */
+	public double evaluateCandidate(AbstractRepresentation candidate) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	/** Returns the achievable maximum fitness of this problem. A representations with this fitness value cannot be improved any further. */
+	public double getMaximumFitness() {
+		return Double.MAX_VALUE;
+	}
+
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frevo SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+	<config>
+		<entry key="author" type="STRING"
+			value="Thomas Dittrich, Wilfried Elmenreich" />
+		<entry key="version" type="STRING" value="1.0" />
+		<entry key="classdir" type="STRING"
+			value="InvertedPendulum/InvertedPendulum" />
+		<entry key="classname" type="STRING"
+			value="InvertedPendulum.InvertedPendulum" />
+		<entry key="name" type="STRING" value="InvertedPendulum" />
+		<entry key="description" type="STRING"
+			value="An inverted pendulum is a pendulum which has its mass above its pivot point. It is implemented with the pivot point mounted on a cart that can move horizontally. This problem is evaluating the controller of the cart with the task to keep the pendulum balanced over the simulation time." />
+		<entry key="image" type="STRING" value="InvertedPendulum.png" />
+		<entry key="tags" type="STRING" value="InvertedPendulum TAG" />
+	</config>
+	<properties>
+		<propentry key="length_of_timestep_ms" type="FLOAT"
+			value="1f"
+			description="The length of one simulation step in milliseconds." />
+		<propentry key="number_of_timesteps" type="INT"
+			value="10000" description="Number of timesteps per simulation run." />
+		<propentry key="fitnessmodel" type="ENUM"
+			value="ANGLE_POW_2_PLUS_USED_WAY"
+			enumName="InvertedPendulum.FitnessModel"
+			description="Decides what factors shall be taking into account when evaluating a solution." />
+		<propentry key="inputmodel" type="ENUM"
+			value="ANGLE_VPENDULUM_VSLIDE" enumName="InvertedPendulum.InputModel"
+			description="Sets what information shall be passed to the controller before each time step." />
+	</properties>
+	<requirements>
+		<reqentry key="inputnumber" type="INT" value="4" />
+		<reqentry key="outputnumber" type="INT" value="1" />
+		<reqentry key="minimumCandidates" type="INT" value="1" />
+		<reqentry key="maximumCandidates" type="INT" value="1" />
+	</requirements>
+</icomponent>

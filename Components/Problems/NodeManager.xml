@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+  <config>
+    <entry key="classdir" type="STRING" value="querySched"/>
+    <entry key="classname" type="STRING" value="sched.NodeManager"/>
+	<entry key="name" type="STRING" value="LEADS Smart Scheduler"/>
+	<entry key="description" type="STRING" value="Scheduling query trees on multiple microclouds"/>
+	<entry key="image" type="STRING" value="SmartGrid.png"/>
+	<entry key="tags" type="STRING" value="SmartGrid TAG"/>
+  </config>
+  <properties>
+  		<propentry key="numberOfClouds" type="INT" value="3"/>
+  		<propentry key="numberOfClientsperCloud" type="INT" value="10"/>
+  		<propentry key="numberofQueriesperClient" type="INT" value="100" />
+   		<propentry key="webpagesRatio" type="INT" value="60"/>
+  		<propentry key="useRandomScheduler" type="INT" value="0"/>
+  		<propentry key="log" type="INT" value="0"/>
+  		<propentry key="inputSizeGB" type="INT" value="29"/>
+  </properties>
+  <requirements>
+    <reqentry key="inputnumber" type="INT" value="3"/>
+    <reqentry key="outputnumber" type="INT" value="1"/>
+    <reqentry key="minimumCandidates" type="INT" value="1"/>
+    <reqentry key="maximumCandidates" type="INT" value="1"/>
+  </requirements>
+</icomponent>

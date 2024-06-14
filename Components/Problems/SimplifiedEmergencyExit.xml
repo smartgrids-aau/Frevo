@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+  <config>
+    <entry key="classdir" type="STRING" value="SimplifiedEmergencyExit"/>
+    <entry key="classname" type="STRING" value="SimplifiedEmergencyExit"/>
+	<entry key="name" type="STRING" value="SimplifiedEmergencyExit"/>
+	<entry key="description" type="STRING" value="A simulation where one Agent tries to find the Emergency Exit"/>
+	<entry key="image" type="STRING" value="SimplifiedEmergencyExit.png"/>
+  </config>
+  <properties>
+  <propentry key="xpositionofEmergencyExit" type="INT" value="99"/>
+  <propentry key="ypositionofEmergencyExit" type="INT" value="99"/>
+  <propentry key="width" type="INT" value="100"/>
+  <propentry key="height" type="INT" value="100"/>
+  <propentry key="xpositionofAgent" type="INT" value="50"/>
+  <propentry key="ypositionofAgent" type="INT" value="50"/>
+  <propentry key="steps" type="INT" value="50"/>
+  </properties>
+  <requirements>
+    <reqentry key="inputnumber" type="INT" value="2"/>
+    <reqentry key="outputnumber" type="INT" value="2"/>
+    <reqentry key="minimumCandidates" type="INT" value="1"/>
+    <reqentry key="maximumCandidates" type="INT" value="1"/>
+  </requirements>
+</icomponent>

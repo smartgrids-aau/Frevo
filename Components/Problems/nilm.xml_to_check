@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frevo SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+  <config>
+    <entry key="classdir" type="STRING" value="NILM/nilm"/>
+    <entry key="classname" type="STRING" value="nilm.Nilm"/>
+	<entry key="name" type="STRING" value="NILM"/>
+	<entry key="description" type="STRING" value="A simple problem to test evolutionary algorithms on the load disaggregation problem. Fitness is determined by the mean square error."/>
+	<entry key="image" type="STRING" value="hems.png"/>
+	<entry key="tags" type="STRING" value="NILM TAG"/>
+  </config>
+  <properties>
+	<propentry key="dataset_folder" type="STRING" value="/Users/andreamonacchi/Downloads/GREEND_0-2_300615/building2/"/>
+	<propentry key="number_of_days" type="INT" value="1"/>
+	<propentry key="window_size" type="INT" value="120"/>
+	<propentry key="limit_power" type="FLOAT" value="10000"/>
+	<propentry key="use_noise" type="BOOLEAN" value="false" description="Add up all sensor data available in the dataset to create further measurement noise."/>
+  </properties>
+  <requirements>
+    <reqentry key="inputnumber" type="INT" value="120"/>
+    <reqentry key="outputnumber" type="INT" value="1"/>
+    <reqentry key="minimumCandidates" type="INT" value="1"/>
+    <reqentry key="maximumCandidates" type="INT" value="1"/>
+  </requirements>
+</icomponent>

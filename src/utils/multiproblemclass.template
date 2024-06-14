@@ -1,0 +1,30 @@
+package PACKAGENAME;
+
+import core.AbstractMultiProblem;
+import core.AbstractRepresentation;
+import java.util.List;
+
+public class TEMP extends AbstractMultiProblem {
+
+	@Override
+	/** Returns the fitness of the given representations. The returned list contains the representations with their achieved scores. A higher score usually means a better ranking.<br>
+	 * However, the order of the candidates matters the most for ranking, the scores are secondary.
+	 * @param candidates Array of candidates to be evaluated.
+	 * @return a list of evaluated candidates with decreasing fitness. That means better candidates have lower index. */
+	public List<RepresentationWithScore> evaluateFitness(AbstractRepresentation[] candidates) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/** This function is called when the user request a visual replay from the problem.
+	 * A total re-evaluation is not needed, only to provide a visual mean for
+	 * the user to grasp the performance of the indicated candidate solutions.
+	 * <p> 
+	 * It is recommended to use advanced threading for display like {@link SwingWorker}.
+	 * @param candidates Array of candidates whose replay has been requested. */
+	public void replayWithVisualization(AbstractRepresentation[] candidates) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

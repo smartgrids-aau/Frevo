@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+	<config>
+		<entry key="author" type="STRING"
+			value="Istvan Fehervari, Tobias Ibounig" />
+		<entry key="version" type="STRING" value="1.1" />
+		<entry key="classdir" type="STRING"
+			value="SwissSystem/swissSystem" />
+		<entry key="classname" type="STRING"
+			value="swissSystem.SwissSystem" />
+		<entry key="name" type="STRING" value="Swiss System" />
+		<entry key="description" type="STRING"
+			value="Swiss System style tournament where the idea is that each player will be pitted against another player who has done as well (or poorly) as him or herself. Warning: DOES NOT SUPPORT ODD POPULATION SIZE!" />
+		<entry key="image" type="STRING" value="swisssystem.png" />
+		<entry key="tags" type="STRING" value="tournament" />
+	</config>
+	<properties>
+		<propentry key="points_win" type="INT" value="2"
+			description="Number of points the winner gets after each game." />
+		<propentry key="points_tie" type="INT" value="1"
+			description="Number of points gained by both players in case of a tie." />
+		<propentry key="parallelthreads" type="INT" value="1"
+			description="Number of parallel threads that run the ranking." />
+	</properties>
+</icomponent>

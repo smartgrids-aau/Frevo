@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frevo SYSTEM ".//Components//ISaveSession.dtd">
+
+<frevo>
+  <sessionconfig>
+    <configentry key="CustomName" type="STRING" value="Test"/>
+    <configentry key="NumberofRuns" type="INT" value="1"/>
+    <configentry key="StartingSeed" type="LONG" value="12345"/>
+  </sessionconfig>
+  <problem class="light.Light">
+    <problementry key="evalnumber" type="INT" value="20"/>
+    <problementry key="simulationtime" type="INT" value="30000"/>
+    <problementry key="fitnesscalculation" type="ENUM" value="Using Time and Distance"/>
+    <problementry key="gridcellsize" type="FLOAT" value="30.0f"/>
+  </problem>
+  <method class="nnga.NNGA">
+    <methodentry key="xoverMethod" type="INT" value="1"/>
+    <methodentry key="mutationseverity" type="FLOAT" value="0.3f"/>
+    <methodentry key="populationsize" type="INT" value="50"/>
+    <methodentry key="populationnumber" type="INT" value="1"/>
+    <methodentry key="percentage_random" type="FLOAT" value="0.10f"/>
+    <methodentry key="percentage_mutate" type="FLOAT" value="0.40f"/>
+    <methodentry key="percentage_elite" type="FLOAT" value="0.15f"/>
+    <methodentry key="mutationMethod" type="INT" value="1"/>
+    <methodentry key="percentage_xover" type="FLOAT" value="0.30f"/>
+    <methodentry key="saveinterval" type="INT" value="0"/>
+    <methodentry key="interXover_frequency" type="INT" value="10"/>
+    <methodentry key="percentage_renew" type="FLOAT" value="0.05f"/>
+    <methodentry key="generations" type="INT" value="2"/>
+  </method>
+  <representation class="fsm.MealyFSM">
+    <representationentry key="num_of_states" type="INT" value="6"/>
+    <representationentry key="max_input_values" type="INTARRAY" value="70,70"/>
+    <representationentry key="mutate_del_tr_prob" type="FLOAT" value="0.01f"/>
+    <representationentry key="mutate_mod_tr_nextstate_prob" type="FLOAT" value="0.01f"/>
+    <representationentry key="mutate_del_state_prob" type="FLOAT" value="0.01f"/>
+    <representationentry key="unit_input_values" type="INTARRAY" value="70,70"/>
+    <representationentry key="distance_calc_method" type="ENUM" value="HAMMING_DISTANCE"/>
+    <representationentry key="generation_mode" type="ENUM" value="SIMAO"/>
+    <representationentry key="mutate_threshold_prob" type="FLOAT" value="0.01f"/>
+    <representationentry key="mutate_add_state_prob" type="FLOAT" value="0.01f"/>
+    <representationentry key="mutate_mod_init_state_prob" type="FLOAT" value="0.01f"/>
+    <representationentry key="mutate_mod_tr_output_prob" type="FLOAT" value="0.01f"/>
+    <representationentry key="output_units" type="INT" value="1000"/>
+    <representationentry key="threshold_units" type="INTARRAY" value="70"/>
+    <representationentry key="state_num_change_allowed" type="BOOLEAN" value="false"/>
+    <representationentry key="min_input_values" type="INTARRAY" value="0,0"/>
+    <representationentry key="nthresholds_for_inputs" type="INTARRAY" value="1,1"/>
+  </representation>
+  <ranking class="AbsoluteRanking.AbsoluteRanking">
+    <rankingentry key="parallelthreads" type="INT" value="1"/>
+  </ranking>
+</frevo>

@@ -1,0 +1,22 @@
+package PACKAGENAME;
+
+import java.util.ArrayList;
+import java.util.Random;
+import core.AbstractRanking;
+import core.AbstractRepresentation;
+import core.ProblemXMLData;
+
+public class TEMP extends AbstractRanking {
+
+	/** Sorts the given array of representations in a descending order of fitness and returns the number of evaluation that was required for the ranking to finish.
+	 * Evaluation of the candidates is done by the provided <i>problem</i> component.
+	 * @param representations The population to be sorted.
+	 * @param problem The problem descriptor to be used for evaluation.
+	 * @param random The random generator object used for sorting.
+	 * @return the number of evaluations that were needed to rank the given set of representations*/
+	public int sortCandidates (final ArrayList<AbstractRepresentation> representations, final ProblemXMLData problem, Random random) {
+		// TODO Auto-generated method stub
+		return 0;	
+	}
+
+}

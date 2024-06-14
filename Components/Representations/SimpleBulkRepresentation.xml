@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frevo SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+	<config>
+		<entry key="author" type="STRING" value="Istvan Fehervari" />
+		<entry key="version" type="STRING" value="1.00" />
+		<entry key="classdir" type="STRING"
+			value="SimpleBulkRepresentation/bulkrepresentation/simplebulkrepresentation" />
+		<entry key="classname" type="STRING"
+			value="bulkrepresentation.simplebulkrepresentation.SimpleBulkRepresentation" />
+		<entry key="name" type="STRING"
+			value="Simple Bulkrepresentation" />
+		<entry key="description" type="STRING"
+			value="Simple bulk representation that supports in-place crossover and mutation operators." />
+		<entry key="image" type="STRING"
+			value="SimpleBulkRepresentation.png" />
+		<entry key="tags" type="STRING"
+			value="simplebulkrepresentation TAG" />
+		<entry key="isBulkRepresentation" type="BOOLEAN" value="true" />
+	</config>
+	<properties>
+		<propentry key="core_representation_component" type="STRING"
+			value="NULL" description="Representation type in this component." />
+		<propentry key="genotype_size" type="INT" value="2"
+			description="Number of representations within the genotype." />
+		<propentry key="is_gentype_positions_fixed" type="BOOLEAN"
+			value="true"
+			description="If true, mutations and crossover operations will not change the position of the genotypes." />
+	</properties>
+</icomponent>

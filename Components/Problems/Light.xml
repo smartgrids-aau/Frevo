@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+	<config>
+		<entry key="author" type="STRING"
+			value="Istvan Fehervari, Sergii Zhevzhyk" />
+		<entry key="version" type="STRING" value="1.0" />
+		<entry key="classdir" type="STRING" value="Light/light" />
+		<entry key="classname" type="STRING" value="light.Light" />
+		<entry key="name" type="STRING" value="Light!" />
+		<entry key="description" type="STRING"
+			value="A simple problem where a robot with light sensors should find the light source" />
+		<entry key="image" type="STRING" value="light.png" />
+		<entry key="tags" type="STRING" value="robot" />
+	</config>
+	<properties>
+		<propentry key="evalnumber" type="INT" value="20" />
+		<propentry key="simulationtime" type="INT" value="30000" />
+		<propentry key="gridcellsize" type="FLOAT" value="30.0f" />
+		<propentry key="fitnesscalculation" type="ENUM"
+			value="Using Time and Distance"
+			enumName="light.FitnessCalculationMethod" />
+	</properties>
+	<requirements>
+		<reqentry key="inputnumber" type="INT" value="2" />
+		<reqentry key="outputnumber" type="INT" value="2" />
+		<reqentry key="minimumCandidates" type="INT" value="1" />
+		<reqentry key="maximumCandidates" type="INT" value="1" />
+	</requirements>
+</icomponent>

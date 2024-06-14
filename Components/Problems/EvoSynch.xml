@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frevo SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+  <config>
+    <entry key="classdir" type="STRING" value="EvoSynch/evosynch"/>
+    <entry key="classname" type="STRING" value="evosynch.EvoSynch"/>
+	<entry key="name" type="STRING" value="EvoSynch"/>
+	<entry key="description" type="STRING" value="A simulation of randomly connected pulse-coupled osscillators to find optimal jumping policy"/>
+	<entry key="image" type="STRING" value="EvoSynch.png"/>
+	<entry key="tags" type="STRING" value="EvoSynch TAG"/>
+  </config>
+  <properties>
+	<propentry key="number_of_nodes" type="INT" value="5"/>
+	<propentry key="average_node_degree" type="INT" value="3"/>
+	<propentry key="simulation_length_sec" type="INT" value="100"/>
+	<propentry key="simulation_step_sec" type="FLOAT" value="0.01f"/>
+	<propentry key="propagation_delay_sec" type="FLOAT" value="0.05f"/>
+	<propentry key="number_of_evaluations" type="INT" value="1"/>
+  </properties>
+  <requirements>
+    <reqentry key="inputnumber" type="INT" value="1"/>
+    <reqentry key="outputnumber" type="INT" value="1"/>
+    <reqentry key="minimumCandidates" type="INT" value="1"/>
+    <reqentry key="maximumCandidates" type="INT" value="1"/>
+  </requirements>
+</icomponent>

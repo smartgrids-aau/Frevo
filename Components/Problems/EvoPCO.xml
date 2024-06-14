@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frevo SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+  <config>
+    <entry key="classdir" type="STRING" value="EvoPCO/fehervari.evopco"/>
+    <entry key="classname" type="STRING" value="fehervari.evopco.EvoPCO"/>
+	<entry key="name" type="STRING" value="EvoPCO"/>
+	<entry key="description" type="STRING" value="Simulates and evolves jumping policies of pulse-coupled oscillators with the JProwler simulator"/>
+	<entry key="image" type="STRING" value="EvoPCO.png"/>
+	<entry key="tags" type="STRING" value="EvoPCO TAG"/>
+  </config>
+  <properties>
+	<propentry key="number_of_nodes" type="INT" value="5"/>
+	<propentry key="number_of_evaluations" type="INT" value="1"/>
+	<propentry key="simulation_length_s" type="INT" value="100"/>
+	<propentry key="radio_model" type="ENUM" value="RAYLEIGH_RADIO_MODEL" enumName="fehervari.evopco.RadioModel"/>
+	<propentry key="network_topology" type="ENUM" value="REGULAR_GRID_TOPOLOGY" enumName="fehervari.evopco.NetworkTopology"/>
+	<propentry key="jumping_policy" type="ENUM" value="FIREFLY_POLICY" enumName="fehervari.evopco.JumpingPolicy"/>
+	<propentry key="area_side_length_m" type="FLOAT" value="100f"/>
+	<propentry key="clock_drift" type="INT" value="0"/>
+	<propentry key="random_false_positive" type="FLOAT" value="0.01f"/>
+  </properties>
+  <requirements>
+    <reqentry key="inputnumber" type="INT" value="1"/>
+    <reqentry key="outputnumber" type="INT" value="1"/>
+    <reqentry key="minimumCandidates" type="INT" value="1"/>
+    <reqentry key="maximumCandidates" type="INT" value="1"/>
+  </requirements>
+</icomponent>

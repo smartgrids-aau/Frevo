@@ -1,0 +1,73 @@
+### Release: 1.5
+
+ - License Change (possible as copyright owners): The project has been relicensed from the GNU General Public License (GPL) to the Apache License 2.0. This change allows for more flexible usage and distribution of the code while maintaining open source compliance.
+ - Updates in Java code
+
+### Release: 1.3
+
+ - Updated code to run with Java 8
+ - Temporarily removed HEMS because of compatibility problems
+
+### Release: 1.2
+
+ - Added a simulation for modeling trading behavior of loads and local energy generators (HEMS).
+ - Added a simulation of the one player pong game (SinglePong).
+ - Added a simulation of the pong game (Pong).
+
+### Release: 1.1
+
+ - Accelerated SwissSystem ranking. It supports odd number of players.
+ - Fixed reading of configuration file for NNGA.
+ - Fixed FullTournament ranking.
+ - Fixed Simple soccer and Robot soccer problems.
+ - Player placement in robot soccer simulations is now exactly symmetrical
+ - Added progress bar to the sidebar to visualize the process of evolution (only for Mac OS).
+
+### Release: 1.0
+
+- Results of a simulation can be browsed and replayed without opening the result file
+- Results can be browsed and replayed when a simultaion is paused
+- New problems, representation and optimization components
+- Better grouping of simulation results in interactive mode
+
+### Release: 0.93
+
+- CreateScripts: Removed the -server flag from the scripts.
+- ComponentCreator: issues with nested package directories has been fixed
+- Included .class files are now compiled properly with Java 1.6
+- Included FastMath library has been updated to the newest version
+- The function getUniqueName() has been renamed to getHash() to prevent confusion
+- Details shown on the GUI are now alphabetically sorted
+
+### Release: 0.92
+
+#### Changelog:
+- Fixed templates for ComponentCreator
+- Fixed problem when removing MultiProblems
+- Added Simulated Robot Soccer component (needed by simsoccer)
+
+
+### Release: 0.91
+
+#### Changelog:
+
+- Various performance and bug fixes
+
+##### FREVO GUI:
+- Generated chart windows can now be individually closed
+
+- Evaluation of multi problems has been implemented
+
+##### FREVO shell
+
+- added command line parameter:
+	-l : lists the installed components
+	-r COMPONENT_NAME removes the specified component
+	
+##### Components
+
+- Added a Mealy FSM representation
+
+### Release: 0.9
+
+- First sourceforge release

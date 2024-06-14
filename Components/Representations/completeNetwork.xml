@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+  <config>
+    <entry key="classdir" type="STRING" value="CompleteNetwork/completeNetwork"/>
+    <entry key="classname" type="STRING" value="completeNetwork.CompleteNetwork"/>
+	<entry key="name" type="STRING" value="Fully connected neural network"/>
+	<entry key="description" type="STRING" value="Fully connected, recurrent artificial neural network with rigid structure. Only weights and biases can be evolved. THIS REPRESENTATION IS DEPRECATED, PLEASE USE FULLYMESHEDNET INSTEAD!"/>
+	<entry key="image" type="STRING" value="CompleteNetwork.png"/>
+	<entry key="tags" type="STRING" value="neural network"/>
+  </config>
+  <properties>
+	  <propentry key="hiddenNodes" type="INT" value="2"/>
+	  <propentry key="weight_range" type="FLOAT" value="2f"/>
+	  <propentry key="bias_range" type="FLOAT" value="2f"/>
+	  <propentry key="stepNumber" type="INT" value="2"/>
+  </properties>
+</icomponent>

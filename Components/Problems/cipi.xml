@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+	<config>
+		<entry key="classdir" type="STRING" value="CIPI/cipi" />
+		<entry key="classname" type="STRING" value="cipi.CIPI" />
+		<entry key="name" type="STRING" value="Common Interest vs. Private Interest" />
+		<entry key="description" type="STRING"
+			value="A game of 6 players where each one starts with 20 dollars and donates a portion of it (or not) every round. The donated money will be tripled and distributed evenly among the players. The aim of a player is to maximize its money either by cooperating or not." />
+		<entry key="image" type="STRING" value="cipi.png" />
+		<entry key="tags" type="STRING" value="economy,game theory" />
+	</config>
+	<properties>
+		<propentry key="evaluation_times" type="INT" value="10" />
+		<propentry key="startuptokens" type="INT" value="20"/>
+	</properties>
+	<requirements>
+		<reqentry key="inputnumber" type="INT" value="7" />
+		<reqentry key="outputnumber" type="INT" value="1" />
+		<reqentry key="minimumCandidates" type="INT" value="6" />
+		<reqentry key="maximumCandidates" type="INT" value="6" />
+	</requirements>
+</icomponent>

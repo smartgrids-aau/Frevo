@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frevo SYSTEM ".//Components//ISaveSession.dtd">
+
+<frevo>
+  <sessionconfig>
+    <configentry key="CustomName" type="STRING" value="-INFO-"/>
+    <configentry key="NumberofRuns" type="INT" value="1"/>
+    <configentry key="StartingSeed" type="LONG" value="-SEED-"/>
+  </sessionconfig>
+  <problem class="light.Light">
+    <problementry key="evalnumber" type="INT" value="20"/>
+    <problementry key="simulationtime" type="INT" value="30000"/>
+    <problementry key="fitnesscalculation" type="ENUM" value="Using Time and Distance"/>
+    <problementry key="gridcellsize" type="FLOAT" value="30.0f"/>
+  </problem>
+  <method class="pso.PSO">
+    <methodentry key="W" type="FLOAT" value="0.7f"/>
+    <methodentry key="C2" type="FLOAT" value="2.1f"/>
+    <methodentry key="C1" type="FLOAT" value="2.4f"/>
+    <methodentry key="generations" type="INT" value="-GENERATIONS-"/>
+    <methodentry key="populationsize" type="INT" value="-POPSIZE-"/>
+  </method>
+  <representation class="fullyMeshedNet.FullyMeshedNet">
+    <representationentry key="mutation_rate" type="FLOAT" value="0.2f"/>
+    <representationentry key="variable_mutation_rate" type="BOOLEAN" value="false"/>
+    <representationentry key="iterations" type="INT" value="2"/>
+    <representationentry key="bias_range" type="FLOAT" value="2f"/>
+    <representationentry key="weight_range" type="FLOAT" value="2f"/>
+    <representationentry key="random_source" type="BOOLEAN" value="false"/>
+    <representationentry key="hiddenNodes" type="INT" value="2"/>
+    <representationentry key="activationFunction" type="ENUM" value="LINEAR"/>
+    <representationentry key="random_bias_range" type="FLOAT" value="0.2f"/>
+  </representation>
+  <ranking class="AbsoluteRanking.AbsoluteRanking">
+    <rankingentry key="parallelthreads" type="INT" value="-PARALLELTHREADS-"/>
+  </ranking>
+</frevo>

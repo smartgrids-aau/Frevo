@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frevo SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+  <config>
+    <entry key="classdir" type="STRING" value="spiderino/Spiderino"/>
+    <entry key="classname" type="STRING" value="spiderino.Spiderino"/>
+	<entry key="name" type="STRING" value="Spiderino"/>
+	<entry key="description" type="STRING" value="Simulation of the Spiderino Swarm bots looking for a light source."/>
+	<entry key="image" type="STRING" value="spiderino.png"/>
+	<entry key="tags" type="STRING" value="spiderino TAG"/>
+  </config>
+  <properties>
+	<!-- Place your properties here -->
+  </properties>
+  <requirements>
+    <reqentry key="inputnumber" type="INT" value="12"/>
+    <reqentry key="outputnumber" type="INT" value="2"/>
+    <reqentry key="minimumCandidates" type="INT" value="1"/>
+    <reqentry key="maximumCandidates" type="INT" value="1"/>
+  </requirements>
+</icomponent>

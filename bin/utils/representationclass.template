@@ -1,0 +1,141 @@
+package PACKAGENAME;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Hashtable;
+import java.util.Vector;
+
+import org.dom4j.Element;
+import org.dom4j.Node;
+import utils.NESRandom;
+import core.AbstractRepresentation;
+import core.XMLFieldEntry;
+
+public class TEMP extends AbstractRepresentation {
+
+	/** Constructs a new representation with the given parameters.
+	 * @param numberOfInputs Number of input connectors
+	 * @param numberOfOutputs Number of output connectors
+	 * @param random The random generator object used to construct this representation
+	 * @param properties The set of properties as they are defined in the component's XML descriptor file*/
+	public TEMP(int numberOfInputs, int numberOfOutputs, NESRandom random,
+			Hashtable<String, XMLFieldEntry> properties) {
+		super(numberOfInputs, numberOfOutputs, random, properties);
+		// TODO Auto-generated constructor stub
+	}
+
+	/** Exports the content of this representation to a file. Format and type is custom defined.
+	 * @param saveFile The file to be saved to*/
+	@Override
+	public void exportToFile(File saveFile) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/**
+	 * Specific implementation of the mutation function that modifies this representation based on the provided parameters.
+	 * @param severity Should be between 0..1, interpreted by the representation.
+	 * @param probability Should be between 0..1, probability for one genome to be mutated.
+	 * @param method Selected mutation method. Use {@link #getNumberofMutationFunctions()} to obtain the number of implemented methods.
+	 */
+	@Override
+	protected void mutationFunction(float severity, float probability,
+			int method) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/** Specific implementation of the recombination function that initiates a crossover on this representation
+	 * and with the given representation with the provided function.<br>
+	 * Use {@link #getNumberOfRecombinationFunctions()} to obtain the number of implemented recombination functions. */
+	@Override
+	protected void recombinationFunction(AbstractRepresentation other,
+			int method) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/** Returns the number of implemented mutation functions.
+	 * @return the number of mutation functions implemented by this class.*/
+	@Override
+	public int getNumberofMutationFunctions() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/** Returns the number of implemented crossover functions.
+	 * @return the number of recombination functions implemented by this class. */
+	@Override
+	public int getNumberOfRecombinationFunctions() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/** Processes the given list of inputs and returns the corresponding output values. The output values must be within the range of 0..1. 
+	 * @param input The list of input values to be processed.
+	 * @return a list of output values.*/
+	@Override
+	public ArrayList<Float> getOutput(ArrayList<Float> input) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/** Resets the representation to its base state. Typically this is meant to erases cache for representations possessing some memory.*/
+	@Override
+	public void reset() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/** Compares this representation to another one.
+	 * Basically, this function should provide a value measuring the distance from another representation of the same type.
+	 * @param representation The other representation to compare to.
+	 * @return a value representing the distance between the two candidates.*/
+	@Override
+	public double diffTo(AbstractRepresentation representation) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/** Creates a full clone of this representation. The returned object must be a deep copy of this representation.
+	 *  @return a deep copy of this representation. */
+	@Override
+	protected AbstractRepresentation cloneFunction() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/** Exports this representation and all its necessary data to the provided XML element. The representation must be reconstructible from the saved data using {@link #loadFromXML(Node)}.
+	 * @param element The root element to be used for saving. */
+	@Override
+	public Element exportToXmlElement(Element element) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/** Reconstructs this representation from the given XML node.
+	 * @param node The root XML node to load the data from.
+	 * @return a newly created representation built from the provided data. */
+	@Override
+	public AbstractRepresentation loadFromXML(Node node) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/** Returns a table of key-value pairs that describes this representation. This data is mostly used to visualize this specific representation instance.
+	 * @return a human-readable table about the details/configuration of this specific instance*/
+	@Override
+	public Hashtable<String, String> getDetails() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/** Returns a unique name of this representation calculated by its parameters/structure. This is mostly used for identification.
+	 * @return a unique name of this representation instance.*/
+	@Override
+	public String getHash() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

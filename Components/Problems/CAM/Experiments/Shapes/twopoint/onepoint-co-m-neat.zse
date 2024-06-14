@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frevo SYSTEM ".//Components//ISaveSession.dtd">
+
+<frevo>
+  <sessionconfig>
+    <configentry key="CustomName" type="STRING" value="Onepoint-COM-neat"/>
+    <configentry key="NumberofRuns" type="INT" value="20"/>
+    <configentry key="StartingSeed" type="LONG" value="12345"/>
+  </sessionconfig>
+  <problem class="cam.Cam">
+    <problementry key="fitness_steps" type="INT" value="1"/>
+    <problementry key="smartFitnessModel" type="BOOLEAN" value="true"/>
+    <problementry key="istorroid" type="BOOLEAN" value="false"/>
+    <problementry key="simulation_steps" type="INT" value="50"/>
+    <problementry key="inputmodel" type="ENUM" value="COLOR_OUTPUT_MOORE"/>
+    <problementry key="picture" type="FILE" value="/home/ifeherva/Frevo/Components/Problems/CAM/Experiements/Shapes/onepoint_10_10.png"/>
+    <problementry key="bestsolutionOutOfNSteps" type="BOOLEAN" value="true"/>
+  </problem>
+  <method class="gaspecies.GASpecies">
+    <methodentry key="max_species_number" type="INT" value="30"/>
+    <methodentry key="saveinterval" type="INT" value="0"/>
+    <methodentry key="compatibility_threshold" type="FLOAT" value="1"/>
+    <methodentry key="survival_rate" type="FLOAT" value="0.2f"/>
+    <methodentry key="percentage_xover" type="FLOAT" value="0.4f"/>
+    <methodentry key="chance_mutate" type="FLOAT" value="0.8f"/>
+    <methodentry key="generations" type="INT" value="1000"/>
+    <methodentry key="populationsize" type="INT" value="100"/>
+  </method>
+  <representation class="neat.NEAT">
+    <representationentry key="gene_coeff" type="FLOAT" value="1f"/>
+    <representationentry key="recursive" type="BOOLEAN" value="false"/>
+    <representationentry key="mutate_add_node_prob" type="FLOAT" value="0.01f"/>
+    <representationentry key="weight_coeff" type="FLOAT" value="0.4f"/>
+    <representationentry key="weight_range" type="FLOAT" value="2f"/>
+    <representationentry key="mutate_add_link_prob" type="FLOAT" value="0.01f"/>
+    <representationentry key="bias_range" type="FLOAT" value="2f"/>
+  </representation>
+  <ranking class="AbsoluteRanking.AbsoluteRanking">
+    <rankingentry key="parallelthreads" type="INT" value="12"/>
+  </ranking>
+</frevo>

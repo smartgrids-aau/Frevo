@@ -1,0 +1,48 @@
+### Current latest release: 1.0
+
+- Results of a simulation can be browsed and replayed without opening the result file
+- Results can be browsed and replayed when a simultaion is paused
+- New problems, representation and optimization components
+- Better grouping of simulation results in interactive mode
+
+### Release: 0.93
+
+- CreateScripts: Removed the -server flag from the scripts.
+- ComponentCreator: issues with nested package directories has been fixed
+- Included .class files are now compiled properly with Java 1.6
+- Included FastMath library has been updated to the newest version
+- The function getUniqueName() has been renamed to getHash() to prevent confusion
+- Details shown on the GUI are now alphabetically sorted
+
+### Release: 0.92
+
+#### Changelog:
+- Fixed templates for ComponentCreator
+- Fixed problem when removing MultiProblems
+- Added Simulated Robot Soccer component (needed by simsoccer)
+
+
+### Release: 0.91
+
+#### Changelog:
+
+- Various performance and bug fixes
+
+##### FREVO GUI:
+- Generated chart windows can now be individually closed
+
+- Evaluation of multi problems has been implemented
+
+##### FREVO shell
+
+- added command line parameter:
+	-l : lists the installed components
+	-r COMPONENT_NAME removes the specified component
+	
+##### Components
+
+- Added a Mealy FSM representation
+
+### Release: 0.9
+
+- First sourceforge release

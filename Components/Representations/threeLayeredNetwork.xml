@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+	<config>
+		<entry key="author" type="STRING"
+			value="Istvan Fehervari, Wilfried Elmenreich" />
+		<entry key="version" type="STRING" value="1.00" />
+		<entry key="classdir" type="STRING"
+			value="LayeredNetwork/threeLayerNetwork" />
+		<entry key="classname" type="STRING"
+			value="threeLayerNetwork.ThreeLayerNetwork" />
+		<entry key="name" type="STRING"
+			value="Three layered neural network" />
+		<entry key="description" type="STRING"
+			value="Feed-forward, non-recurrent artificial neural network with one hidden layer. Only weights and biases will change during evolution." />
+		<entry key="image" type="STRING" value="layerednetwork.png" />
+		<entry key="tags" type="STRING" value="neural network" />
+	</config>
+	<properties>
+		<propentry key="hiddenNodes" type="INT" value="2"
+			description="Number of neurons in the hidden layer." />
+		<propentry key="weight_range" type="FLOAT" value="2f"
+			description="Range of the inital randomly created weights." />
+		<propentry key="bias_range" type="FLOAT" value="2f"
+			description="Range of the inital randomly created biases." />
+		<propentry key="stepNumber" type="INT" value="2"
+			description="Number of times the whole network is executed before returning its output." />
+	</properties>
+</icomponent>

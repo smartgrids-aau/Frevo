@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frevo SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+	<config>
+		<entry key="classdir" type="STRING"
+			value="NoveltySearch/fehervari/noveltysearch" />
+		<entry key="classname" type="STRING"
+			value="fehervari.noveltysearch.NoveltySearch" />
+		<entry key="name" type="STRING" value="NoveltySearch" />
+		<entry key="description" type="STRING"
+			value="Novelty search based on the implementation of Lehman and Stanley. This method ignores the selected ranking component." />
+		<entry key="image" type="STRING" value="NoveltySearch.png" />
+		<entry key="tags" type="STRING" value="NoveltySearch TAG" />
+	</config>
+	<properties>
+		<propentry key="populationsize" type="INT" value="100"
+			description="Size of the population." />
+		<propentry key="generations" type="INT" value="200"
+			description="Number of generations." />
+		<propentry key="initial_novelty_threshold" type="FLOAT"
+			value="6.0f" description="The initial novelty threshold." />
+		<propentry key="mutate_only_probablity" type="FLOAT"
+			value="0.3f"
+			description="Chance that only a mutation occurs instead of a crossover." />
+		<propentry key="mutation_severity" type="FLOAT" value="0.3f"
+			description="Severity of the mutations during evolution." />
+		<propentry key="mutation_method" type="INT" value="1"
+			description="The index of the default mutation method to be used." />
+	</properties>
+</icomponent>

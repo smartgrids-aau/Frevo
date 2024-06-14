@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frevo SYSTEM ".//Components//ISaveSession.dtd">
+
+<frevo>
+  <sessionconfig>
+    <configentry key="CustomName" type="STRING" value="Test"/>
+    <configentry key="NumberofRuns" type="INT" value="1"/>
+    <configentry key="StartingSeed" type="LONG" value="12345"/>
+  </sessionconfig>
+  <problem class="components.simplesoccer.SimpleSoccer">
+    <problementry key="ball_distance_weight" type="INT" value="1000"/>
+    <problementry key="kick_weight" type="INT" value="20000"/>
+    <problementry key="playersPerTeam" type="INT" value="10"/>
+    <problementry key="cartesian" type="BOOLEAN" value="TRUE"/>
+    <problementry key="position_weight" type="INT" value="1"/>
+    <problementry key="score_weight" type="INT" value="4000000"/>
+    <problementry key="ball_goal_weight" type="INT" value="100000"/>
+    <problementry key="evaltime" type="INT" value="60000"/>
+  </problem>
+  <method class="CEA2D.CEA2D">
+    <methodentry key="saveinterval" type="INT" value="0"/>
+    <methodentry key="neighbourhoodmode" type="INT" value="1"/>
+    <methodentry key="percentxoverelite" type="INT" value="30"/>
+    <methodentry key="mutationseverity" type="INT" value="0.3f"/>
+    <methodentry key="mutationprobability" type="FLOAT" value="1"/>
+    <methodentry key="percentelite" type="INT" value="11"/>
+    <methodentry key="generations" type="INT" value="2"/>
+    <methodentry key="percentmutateelite" type="INT" value="60"/>
+    <methodentry key="populationsize" type="INT" value="100"/>
+  </method>
+  <representation class="fullyMeshedNet.FullyMeshedNet">
+    <representationentry key="mutation_rate" type="FLOAT" value="0.2f"/>
+    <representationentry key="variable_mutation_rate" type="BOOLEAN" value="false"/>
+    <representationentry key="iterations" type="INT" value="2"/>
+    <representationentry key="bias_range" type="FLOAT" value="2f"/>
+    <representationentry key="weight_range" type="FLOAT" value="2f"/>
+    <representationentry key="random_source" type="BOOLEAN" value="false"/>
+    <representationentry key="hiddenNodes" type="INT" value="5"/>
+    <representationentry key="activationFunction" type="ENUM" value="SIGMOID"/>
+    <representationentry key="random_bias_range" type="FLOAT" value="0.2f"/>
+  </representation>
+  <ranking class="swissSystem.SwissSystem">
+    <rankingentry key="points_tie" type="INT" value="1"/>
+    <rankingentry key="points_win" type="INT" value="2"/>
+    <rankingentry key="parallelthreads" type="INT" value="1"/>
+  </ranking>
+</frevo>

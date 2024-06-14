@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frevo SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+  <config>
+    <entry key="classdir" type="STRING" value="SpiderinoSim/spiderinosim"/>
+    <entry key="classname" type="STRING" value="spiderinosim.SpiderinoSim"/>
+    <entry key="name" type="STRING" value="SpiderinoSim"/>
+	<entry key="description" type="STRING" value="The Spiderino sim. Parameter units are: m (meters), m/s (meters per second), °/s (degrees per second), ms (milliseconds). fitnessFunctionNumbers are 1 (walk towards the light), 2 (circular shape)."/>
+	<entry key="image" type="STRING" value="Spiderino.png"/>
+  </config>
+  <properties>
+  	<propentry key="fitnessFunctionNumber" type="INT" value="1"/>  
+  	<propentry key="outputCount" type="INT" value="2"/>
+  	<propentry key="evaluationCount" type="INT" value="10"/>  	
+    <propentry key="maximumSteps" type="INT" value="1000"/>
+    <propentry key="stepTime" type="INT" value="50"/>
+    <propentry key="worldWidth" type="FLOAT" value="2"/>
+    <propentry key="worldHeight" type="FLOAT" value="3"/>
+    <propentry key="spiderinoCount" type="INT" value="10"/>    
+    <propentry key="spiderinoRadius" type="FLOAT" value="0.06"/>
+    <propentry key="spiderinoWalkSpeed" type="FLOAT" value="0.06"/>
+    <propentry key="spiderinoTurnSpeed" type="FLOAT" value="120"/>
+    <propentry key="lightRadius" type="FLOAT" value="0.15"/>
+    <propentry key="lightCount" type="INT" value="4"/>
+    <propentry key="distanceThreshold" type="FLOAT" value="0.10"/>
+    <propentry key="goalThreshold" type="FLOAT" value="0.25"/>
+    <propentry key="distanceFitnessWeight" type="FLOAT" value="1"/>
+    <propentry key="walkStepsFitnessWeight" type="FLOAT" value="0"/>
+    <propentry key="turnStepsFitnessWeight" type="FLOAT" value="0"/>
+  </properties>
+  <requirements>
+    <reqentry key="inputnumber" type="INT" value="6"/>
+    <reqentry key="outputnumber" type="INT" value="2"/>
+    <reqentry key="minimumCandidates" type="INT" value="1"/>
+    <reqentry key="maximumCandidates" type="INT" value="1"/>
+  </requirements>
+</icomponent>

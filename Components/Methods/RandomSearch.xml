@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+	<config>
+		<entry key="author" type="STRING" value="Sergii Zhevzhyk" />
+		<entry key="version" type="STRING" value="1.00" />
+		<entry key="classdir" type="STRING"
+			value="RandomSearch/frevo/method/randomsearch" />
+		<entry key="classname" type="STRING"
+			value="frevo.method.randomsearch.RandomSearch" />
+		<entry key="name" type="STRING" value="RandomSearch" />
+		<entry key="description" type="STRING"
+			value="Simple search method constantly generating random points in the solution space. This method is very unefficient and serves as a (lower) benchmark for the complexity of a problem." />
+		<entry key="image" type="STRING" value="RandomSearch.png" />
+		<entry key="tags" type="STRING" value="Random" />
+	</config>
+	<properties>
+		<propentry key="populationsize" type="INT" value="50"
+			description="Size of a population." />
+		<propentry key="generations" type="INT" value="200"
+			description="Number of generations." />
+	</properties>
+</icomponent>

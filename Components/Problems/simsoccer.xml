@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+  <config>
+    <entry key="classdir" type="STRING" value="simsoccer//components//simsoccer"/>
+    <entry key="classname" type="STRING" value="components.simsoccer.SimSoccer"/>
+	<entry key="name" type="STRING" value="Simulated Robot Soccer"/>
+	<entry key="description" type="STRING" value="A 2D simulated robot soccer game. Supports 1v1 ranking systems. Does not support absolute fitness."/>
+	<entry key="image" type="STRING" value="simsoccer.png"/>
+	<entry key="tags" type="STRING" value="game,robots"/>
+  </config>
+  <properties>
+    <propentry key="playersPerTeam" type="INT" value="10"/>
+    <propentry key="position_weight" type="INT" value="1"/>
+    <propentry key="ball_distance_weight" type="INT" value="1000"/>
+    <propentry key="kick_weight" type="INT" value="20000"/>
+    <propentry key="ball_goal_weight" type="INT" value="100000"/>
+    <propentry key="score_weight" type="INT" value="4000000"/>
+    <propentry key="evaltime" type="INT" value="60000"/>    
+  </properties>
+  <requirements>
+    <reqentry key="inputnumber" type="INT" value="13"/>
+    <reqentry key="outputnumber" type="INT" value="4"/>
+    <reqentry key="minimumCandidates" type="INT" value="2"/>
+    <reqentry key="maximumCandidates" type="INT" value="2"/>
+  </requirements>
+</icomponent>

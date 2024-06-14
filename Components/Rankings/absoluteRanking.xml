@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+	<config>
+		<entry key="author" type="STRING"
+			value="Istvan Fehervari, Tobias Ibouning" />
+		<entry key="version" type="STRING" value="1.1" />
+		<entry key="classdir" type="STRING"
+			value="AbsoluteRanking/AbsoluteRanking" />
+		<entry key="classname" type="STRING"
+			value="AbsoluteRanking.AbsoluteRanking" />
+		<entry key="name" type="STRING" value="Absolute Rank" />
+		<entry key="description" type="STRING"
+			value="This algorithm eveluates each canditate separately and sorts the list according to the fitness scores. Uses multiple threads if the parameter 'parallelthreads' is set larger than 1." />
+		<entry key="image" type="STRING" value="absoluteRanking.png" />
+		<entry key="tags" type="STRING" value="absolute" />
+	</config>
+	<properties>
+		<propentry key="parallelthreads" type="INT" value="1"
+			description="Number of parallel threads that run the ranking." />
+	</properties>
+</icomponent>

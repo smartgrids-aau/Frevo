@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+	<config>
+		<entry key="author" type="STRING" value="Istvan Fehervari" />
+		<entry key="version" type="STRING" value="1.00" />
+		<entry key="classdir" type="STRING" value="ttt2/ttt2" />
+		<entry key="classname" type="STRING" value="ttt2.ttt2" />
+		<entry key="name" type="STRING" value="Tic Tac Toe 2x2" />
+		<entry key="description" type="STRING"
+			value="A game for two players, blue and red, who take turns marking the spaces in a 2x2 grid, usually blue going first. The player who succeeds in placing two respective marks in a horizontal or vertical row wins the game. Supports 1v1 ranking systems. Does not support absolute fitness." />
+		<entry key="image" type="STRING" value="ttt2.png" />
+		<entry key="tags" type="STRING" value="game" />
+	</config>
+	<properties>
+	</properties>
+	<requirements>
+		<reqentry key="inputnumber" type="INT" value="4" />
+		<reqentry key="outputnumber" type="INT" value="4" />
+		<reqentry key="minimumCandidates" type="INT" value="2" />
+		<reqentry key="maximumCandidates" type="INT" value="2" />
+	</requirements>
+</icomponent>

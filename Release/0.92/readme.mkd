@@ -1,0 +1,32 @@
+### Current latest release: 0.92
+
+#### Changelog:
+- Fixed templates for ComponentCreator
+- Fixed problem when removing MultiProblems
+- added Simulated Robot Soccer component (needed by simsoccer)
+
+
+### Release: 0.91
+
+#### Changelog:
+
+- Various performance and bug fixes
+
+##### FREVO GUI:
+- Generated chart windows can now be individually closed
+
+- Evaluation of multi problems has been implemented
+
+##### FREVO shell
+
+- added command line parameter:
+	-l : lists the installed components
+	-r COMPONENT_NAME removes the specified component
+	
+##### Components
+
+- Added a Mealy FSM representation
+
+### Release: 0.9
+
+- First sourceforge release

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+  <config>
+    <entry key="classdir" type="STRING" value="SmartGrid/sg"/>
+    <entry key="classname" type="STRING" value="sg.SmartGrid"/>
+	<entry key="name" type="STRING" value="SmartGrid"/>
+	<entry key="description" type="STRING" value="Simple Example to show the functions of frevo"/>
+	<entry key="image" type="STRING" value="SmartGrid.png"/>
+	<entry key="tags" type="STRING" value="SmartGrid TAG"/>
+  </config>
+  <properties>
+  		<propentry key="numberOfHouses" type="INT" value="10"/>
+  		<propentry key="neededEnergy" type="INT" value="5600"/>
+  		<propentry key="penalty" type="INT" value="3"/>
+  </properties>
+  <requirements>
+    <reqentry key="inputnumber" type="INT" value="7"/>
+    <reqentry key="outputnumber" type="INT" value="1"/>
+    <reqentry key="minimumCandidates" type="INT" value="1"/>
+    <reqentry key="maximumCandidates" type="INT" value="1"/>
+  </requirements>
+</icomponent>

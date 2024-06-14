@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+	<config>
+		<entry key="author" type="STRING" value="Istvan Fehervari" />
+		<entry key="version" type="STRING" value="1.00" />
+		<entry key="classdir" type="STRING"
+			value="SimpleSoccer/components/simplesoccer" />
+		<entry key="classname" type="STRING"
+			value="components.simplesoccer.SimpleSoccer" />
+		<entry key="name" type="STRING" value="Simplified Robot Soccer" />
+		<entry key="description" type="STRING"
+			value="A 2D simulated simplfied robot soccer game. Fitness is evaluated based on a weighted sum. Each player is controlled by an own controller instantiated from the same candidate representation. Thus, the game is a product of a self-organized process. The players receive very limited information on the ongoing game, such as the distance to the ball, the distance to the closest teammate/opponent and some information about the borders.
+	Supports 1v1 ranking systems. Does not support absolute fitness." />
+		<entry key="image" type="STRING" value="simplesoccer.png" />
+		<entry key="tags" type="STRING" value="game,robots" />
+	</config>
+	<properties>
+		<propentry key="playersPerTeam" type="INT" value="10"
+			description="The number of players per team." />
+		<propentry key="position_weight" type="INT" value="1"
+			description="Weight value of the fitness objective measuring the distribution on the team on the field" />
+		<propentry key="ball_distance_weight" type="INT"
+			value="1000"
+			description="Weight value of the fitness objective measuring the distance between the players and the ball." />
+		<propentry key="kick_weight" type="INT" value="20000"
+			description="Weight value of the fitness objective measuring the importance of kicking." />
+		<propentry key="ball_goal_weight" type="INT" value="100000"
+			description="Weight value of the fitness objective measuring the distance of the ball to the opponent's goal." />
+		<propentry key="score_weight" type="INT" value="4000000"
+			description="Weight value of the fitness objective measuring the importance of scoring a goal." />
+		<propentry key="evaluation_time" type="INT" value="60000"
+			description="Defines the length of the game in miliseconds." />
+		<propentry key="isCartesian_interpretation" type="BOOLEAN"
+			value="TRUE"
+			description="If true, all information to the controllers will be passed as caresian coordinates instead of polar." />
+		<propentry key="max_kicks" type="INT" value="10"
+			description="The maximum number of kicks per team which we take in account to calculate a fitness." />
+		<propentry key="apply_stamina_model" type="BOOLEAN"
+			value="FALSE"
+			description="Apply stamina model for the player in the soccer simulation." />
+		<propentry key="controller_model" type="ENUM"
+			value="NEARESTINFOPLAYER"
+			enumName="components.simplesoccer.PlayerModel"
+			description="Player controller model" />
+	</properties>
+	<requirements>
+		<reqentry key="inputnumber" type="INT" value="16" />
+		<reqentry key="outputnumber" type="INT" value="4" />
+		<reqentry key="minimumCandidates" type="INT" value="2" />
+		<reqentry key="maximumCandidates" type="INT" value="2" />
+	</requirements>
+</icomponent>

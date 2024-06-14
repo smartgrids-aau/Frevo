@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frevo SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+	<config>
+		<entry key="author" type="STRING" value="Sergii Zhevzhyk" />
+		<entry key="version" type="STRING" value="1.00" />
+		<entry key="classdir" type="STRING" value="pong/Pong" />
+		<entry key="classname" type="STRING" value="pong.Pong" />
+		<entry key="name" type="STRING" value="Pong" />
+		<entry key="description" type="STRING" value="Pong game" />
+		<entry key="image" type="STRING" value="pong.png" />
+		<entry key="tags" type="STRING" value="pong game" />
+	</config>
+	<properties>
+		<!-- concerning the paddles -->
+		<propentry key="playersPerTeam" type="INT" value="3"
+			description="Number of players (paddles) per team." />
+		<propentry key="paddleHeight" type="INT" value="60"
+			description="The height of the paddle." />
+		<propentry key="paddleSpeed" type="FLOAT" value="4"
+			description="Maximum speed of the paddle." />
+
+		<!-- concerning the ball -->
+		<propentry key="numberOfBalls" type="INT" value="1"
+			description="The number of balls in game." />
+
+		<!-- simulation -->
+		<propentry key="maximumSteps" type="INT" value="2000"
+			description="Number of steps in simulation" />
+	</properties>
+	<requirements>
+		<reqentry key="inputnumber" type="INT" value="3" />
+		<reqentry key="outputnumber" type="INT" value="1" />
+		<reqentry key="minimumCandidates" type="INT" value="2" />
+		<reqentry key="maximumCandidates" type="INT" value="2" />
+	</requirements>
+</icomponent>

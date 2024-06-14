@@ -1,0 +1,2305 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+h1
+	{mso-style-link:"Überschrift 1 Zchn";
+	margin-right:0cm;
+	margin-left:0cm;
+	font-size:24.0pt;
+	font-family:"Times New Roman","serif";
+	font-weight:bold;}
+h2
+	{mso-style-link:"Überschrift 2 Zchn";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Cambria","serif";
+	font-weight:bold;
+	font-style:italic;}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+pre
+	{mso-style-link:"HTML Vorformatiert Zchn";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Sprechblasentext Zchn";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";}
+span.berschrift1Zchn
+	{mso-style-name:"Überschrift 1 Zchn";
+	mso-style-link:"Überschrift 1";
+	font-family:"Times New Roman","serif";
+	font-weight:bold;}
+span.HTMLVorformatiertZchn
+	{mso-style-name:"HTML Vorformatiert Zchn";
+	mso-style-link:"HTML Vorformatiert";
+	font-family:"Courier New";}
+span.SprechblasentextZchn
+	{mso-style-name:"Sprechblasentext Zchn";
+	mso-style-link:Sprechblasentext;
+	font-family:"Tahoma","sans-serif";}
+span.berschrift2Zchn
+	{mso-style-name:"Überschrift 2 Zchn";
+	mso-style-link:"Überschrift 2";
+	font-family:"Cambria","serif";
+	font-weight:bold;
+	font-style:italic;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 2.0cm 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=DE-AT>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='line-height:normal'><b><span lang=EN-US
+style='font-size:24.0pt;font-family:"Times New Roman","serif"'>FREVO Tutorial -
+New Problem</span></b></p>
+
+<p class=MsoNormal style='line-height:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman","serif"'>This tutorial
+explains how to model and implement an exampe problem in FREVO. FREVO
+is an open-source framework developed in Java to help
+engineers and scientists in evolutionary design and optimization tasks. The
+major feature of FREVO is the component-wise decomposition and separation of
+the key building blocks for an optimization task. We identify these as the <i>problem
+definition</i>, solution <i>representation</i> and the <i>optimization method</i>.
+</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman","serif"'>In this tutorial
+we will implement a problem definition. In particular, it will be a simulation
+where agents try to find an emergency exit. As a prerequisite, you should have
+installed Java, eclipse, downloaded Frevo and imported it as an eclipse
+project.</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Let's start: </span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span lang=EN-US
+     style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Run ComponentCreator.java.
+     (ComponentCreator.java can be found, as you see in the picture, in the
+     package utils) </span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://mobile.uni-klu.ac.at/selforganized-wiki/index.php/Image:FindingComponentCreator.jpg"
+title="&quot;Image:FindingComponentCreator.jpg&quot; "><span style='font-size:
+12.0pt;font-family:"Times New Roman","serif";color:blue;text-decoration:none'><img
+border=0 width=229 height=207 id="Bild 1"
+src="FREVOTutorial-newProblem-Dateien/image001.jpg"
+alt="Image:FindingComponentCreator.jpg"></span></a></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span lang=EN-US
+     style='font-size:12.0pt;font-family:"Times New Roman","serif"'>A window
+     opens. Here you have to select the type of the component you want to
+     create (Problem, Method, Representation, Ranking). We will select <i>Problem</i>.
+     Then you have to enter a name and a short description. </span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span style='font-size:12.0pt;
+font-family:"Times New Roman","serif"'><img border=0 width=280 height=361
+id="Bild 25" src="FREVOTutorial-newProblem-Dateien/image002.jpg"></span></p>
+
+<p class=MsoNormal style='line-height:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Click on
+&quot;Create&quot; and follow the instructions that are shown. A new folder,
+containing your *.java file, and an *.xml file will be generated. (in this case
+&quot;EmergencyExit.java&quot; and &quot;EmergencyExit.xml&quot;) </span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span lang=EN-US
+     style='font-size:12.0pt;font-family:"Times New Roman","serif"'>The
+     generated *.java file looks like this: </span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> package
+emergencyexit;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> import
+interfaces.IProblem;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> import
+interfaces.IRepresentation;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> public
+class EmergencyExit2 extends IProblem {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>        @Override</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>        public
+double getResult(IRepresentation[] candidates) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>               //
+TODO Auto-generated method stub</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>               return
+0;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>        }</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>        @Override</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>        public
+void replayWithVisualization(IRepresentation[] candidates) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>               //
+TODO Auto-generated method stub</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>        }</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> </span><span
+style='font-size:10.0pt;font-family:"Courier New"'>}</span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-indent:-18.0pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>o<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>getResult()
+is called to simulate without visualization, it should return a fitness value. </span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-indent:-18.0pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>o<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>replayWithVisualization()
+is (as the name says) called to replay the simulation with a (possible
+graphical) visualization. </span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span lang=EN-US
+     style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Implement
+     your simulation. (it is useful to extract it in an own function. So you
+     can call it from getResult() and replayWithVisualization). </span></li>
+</ul>
+
+<p class=MsoNormal style='line-height:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman","serif"'>For this
+tutorial I started with a very simple simulation: </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+int steps;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+int xpositionofEmergencyExit = 0;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+int ypositionofEmergencyExit = 0;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+int width;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+int height;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>  </span><span
+lang=FR style='font-size:10.0pt;font-family:"Courier New"'>int
+xpositionofAgent;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=FR style='font-size:10.0pt;font-family:"Courier New"'>  int
+ypositionofAgent;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=FR style='font-size:10.0pt;font-family:"Courier New"'> 
+IRepresentation[] c;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=FR style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=FR style='font-size:10.0pt;font-family:"Courier New"'>void
+calcSim(){</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=FR style='font-size:10.0pt;font-family:"Courier New"'>   </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=FR style='font-size:10.0pt;font-family:"Courier New"'>   
+xpositionofEmergencyExit = Integer.parseInt(getProperties().get(&quot;xpositionofEmergencyExit&quot;).getValue());</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=FR style='font-size:10.0pt;font-family:"Courier New"'>   
+ypositionofEmergencyExit =
+Integer.parseInt(getProperties().get(&quot;ypositionofEmergencyExit&quot;).getValue());</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=FR style='font-size:10.0pt;font-family:"Courier New"'>    </span><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>xpositionofAgent
+= Integer.parseInt(getProperties().get(&quot;xpositionofAgent&quot;).getValue());</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+ypositionofAgent =
+Integer.parseInt(getProperties().get(&quot;ypositionofAgent&quot;).getValue());</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+for (int step = 0; step &lt; steps; step++) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+Vector&lt;Float&gt; input = new Vector&lt;Float&gt;();</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+input.add((float) (xpositionofEmergencyExit - xpositionofAgent));</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+input.add((float) (ypositionofEmergencyExit - ypositionofAgent));</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+Vector&lt;Float&gt; output = c[0].getOutput(input);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+float xVelocity = output.get(0).floatValue()*2.0f-1.0f;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+float yVelocity = output.get(1).floatValue()*2.0f-1.0f;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+if /* */(xVelocity &gt;= 1.0 &amp;&amp; xpositionofAgent &lt; width - 1)
+xpositionofAgent += 1;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+else if (xVelocity &lt;= -1.0 &amp;&amp; xpositionofAgent &gt; 0 /*   */)
+xpositionofAgent -= 1;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+if /* */(yVelocity &gt;= 1.0 &amp;&amp; ypositionofAgent &lt; height - 1) ypositionofAgent
++= 1;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+else if (yVelocity &lt;= -1.0 &amp;&amp; ypositionofAgent &gt; 0 /*    */)
+ypositionofAgent -= 1;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+} </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>  }</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman","serif"'>The position of
+the emergency exit and the agent are read from the *.xml file which is accessed
+getProperties().get(name).getValue(). <i>name</i> represents the name of the
+value in the *.xml file. The value of &quot;steps&quot;, &quot;width&quot; and
+&quot;height&quot; are written in the functions getResult() and
+replayWithVisualization(). The main function of FREVO is to find the best function
+between input and the output automatically. So you just have to collect all the
+inputs and the representation (here it is c[0]) will return the output. It is
+important that all the inputs and all the outputs are always in the same order.
+The output is always a float value between 0.0 and 1.0. You have to decide how
+to handle these outputs. In this simulation the output defines how the agent
+moves. </span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span lang=EN-US
+     style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Now the
+     code of the simulation is finished but it needs to be called by
+     getResult(). </span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>public
+double getResult(IRepresentation[] candidates) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+steps = Integer.parseInt(getProperties().get(&quot;steps&quot;).getValue());</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+width = Integer.parseInt(getProperties().get(&quot;width&quot;).getValue());</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+height = Integer.parseInt(getProperties().get(&quot;height&quot;).getValue());</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+c = candidates;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+calcSim();</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+return -Math.sqrt(Math.pow((xpositionofEmergencyExit - xpositionofAgent), 2)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+/*            */+ Math.pow((ypositionofEmergencyExit - ypositionofAgent), 2));</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>  }</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman","serif"'>As we said
+before the values of “steps”, “width” and “height” have to be written in this
+function. They are read from the *.xml file. The return value of this function
+says how good this representation was. It says if this value is high, the
+connection of input and output is good. For the emergencyExit simulation this
+value is the negative distance between the agent and the emergency exit. So if
+the agent reaches the emergency exit within the amount of steps, the distance
+will be 0 and so it says it is a good way of connecting input and output. </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman","serif"'>So, we have to
+edit EmergencyExit.xml in order to add the component-specific properties:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+&lt;properties&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>        &lt;entry
+key=&quot;xpositionofAgent&quot; type=&quot;INT&quot; value=&quot;50&quot;/&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>        &lt;entry
+key=&quot;ypositionofAgent&quot; type=&quot;INT&quot; value=&quot;50&quot;/&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>        &lt;entry
+key=&quot;xpositionofEmergencyExit&quot; type=&quot;INT&quot;
+value=&quot;99&quot;/&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>        &lt;entry
+key=&quot;ypositionofEmergencyExit&quot; type=&quot;INT&quot;
+value=&quot;99&quot;/&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>        &lt;entry
+key=&quot;width&quot; type=&quot;INT&quot; value=&quot;100&quot;/&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>        &lt;entry
+key=&quot;height&quot; type=&quot;INT&quot; value=&quot;100&quot;/&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>        &lt;entry
+key=&quot;steps&quot; type=&quot;INT&quot; value=&quot;50&quot;/&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+&lt;/properties&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman","serif"'>and
+to configure the number of inputs and outputs for the agent:</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+&lt;entry key=&quot;inputnumber&quot; type=&quot;INT&quot;
+value=&quot;2&quot;/&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+&lt;entry key=&quot;outputnumber&quot; type=&quot;INT&quot;
+value=&quot;2&quot;/&gt;</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='line-height:normal'><span lang=EN-US
+     style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Finally, we
+     have to implement a visualization for your simulation: </span></li>
+</ul>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+WhiteBoard whiteboard;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+Display display;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+@Override</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+public void replayWithVisualization(IRepresentation[] candidates) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+steps = 0;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+c = candidates;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+width = Integer.parseInt(getProperties().get(&quot;width&quot;).getValue());</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+height = Integer.parseInt(getProperties().get(&quot;height&quot;).getValue());</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+display = new Display(440, 495, &quot;SimplifiedEmergencyExit&quot;);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+display.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+whiteboard = new WhiteBoard(400, 400, width, height, 1);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+whiteboard.addColorToScale(0, Color.WHITE);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+whiteboard.addColorToScale(1, Color.BLACK);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+whiteboard.addColorToScale(2, Color.GREEN);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+JButton minusbutton = new JButton(&quot;-&quot;);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+JButton plusbutton = new JButton(&quot;+&quot;);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+display.add(whiteboard);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+display.add(minusbutton);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+display.add(plusbutton);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+minusbutton.addActionListener(new ActionListener() {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+@Override</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+public void actionPerformed(ActionEvent e) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+if (steps &gt; 0) steps--;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+calcSim();</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+displayResult();</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+display.setTitle(&quot;Simplified Emergency Exit    Step: &quot; + steps);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+} </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+});</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+plusbutton.addActionListener(new ActionListener() {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+@Override</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+public void actionPerformed(ActionEvent e) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+steps++;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+calcSim();</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+displayResult();</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+display.setTitle(&quot;Simplified Emergency Exit    Step: &quot; + steps);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+});</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+display.setVisible(true);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+calcSim();</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+displayResult();</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+display.setTitle(&quot;Simplified Emergency Exit    Step: &quot; + steps);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>  }</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+private void displayResult() {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+int[][] data = new int[width][height];</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+for (int x = 0; x &lt; width; x++) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+for (int y = 0; y &lt; height; y++) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+if /* */(x == xpositionofEmergencyExit &amp;&amp; y ==
+ypositionofEmergencyExit) data[x][y] = 2;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+else if (x == xpositionofAgent /*    */&amp;&amp; y == ypositionofAgent) /*   
+*/data[x][y] = 1;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+else /*                                                                */data[x][y]
+= 0;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+whiteboard.setData(data);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+whiteboard.repaint();</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>  }</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Therefore the
+class WhiteBoard can be used. It is an extension of JPanel which represents a
+two- or three-dimensional grid of data in form of colors or pictures in a grid.
+It only has to be initialized and added to a JFrame or an extension of JFrame.
+Here the class Display is used. It is an extension of JFrame with a new
+constructor and a few settings that have already been done. The window of this
+visualization contains the WhiteBoard and two buttons, which are used to go
+through the simulation step by step. The simulation always does as much steps
+as the value of “steps” says. The simulation with visualization always works with
+the same representation and the same starting conditions. So it is possible to
+increase the value of “steps” and start a simulation from the beginning by
+clicking on plusbutton without having any differences in the agent’s behaviour.
+You will just see the next step of the simulation. For displaying the result
+the position of the agent and the emergency exit have to be converted into a
+two-dimensional array. Also the color-scale of the WhiteBoard has to be set.
+The conversion is done by displayResult(). The setting of the colorscale is
+done in replayWithVisualization by the function addColorToScale(int lowerLimit,
+Color c). All values within lowerLimit and the next lowerLimit or, if there is
+no next lowerLimit, the top, have the color c. As soon as this has been done
+you have to set the data which should be shown by the WhiteBoard. The data is
+set with the function setData(int[][] data). The call of repaint() will force
+the WhiteBoard to visualize the data which will look like this: </span></p>
+
+<p class=MsoNormal style='line-height:normal'><a
+href="https://mobile.uni-klu.ac.at/selforganized-wiki/index.php/Image:SimulationWithVisualization.jpg"
+title="&quot;Image:SimulationWithVisualization.jpg&quot; "><span
+style='font-size:12.0pt;font-family:"Times New Roman","serif";color:blue;
+text-decoration:none'><img border=0 width=440 height=495 id="Bild 3"
+src="FREVOTutorial-newProblem-Dateien/image003.jpg"
+alt="Image:SimulationWithVisualization.jpg"></span></a></p>
+
+<p class=MsoNormal style='line-height:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman","serif"'>The black square
+represents the agent and the green square the emergency exit. </span></p>
+
+<h2><span lang=EN-US>A more complex simulation</span></h2>
+
+<p class=MsoNormal style='line-height:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman","serif"'>Now let’s implement
+a simulation of higher complexity: </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>import
+java.awt.Color;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>import
+java.awt.Dimension;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>import
+java.awt.event.ActionEvent;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>import
+java.awt.event.ActionListener;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>import
+java.util.Random;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>import
+java.util.Vector;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>import
+javax.swing.JButton;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>import
+javax.swing.JFrame;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>import
+javax.swing.JTextField;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>import
+GridVisualization.*;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>import
+interfaces.IProblem;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>import
+interfaces.IRepresentation;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>public
+class EmergencyExit extends IProblem {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>  </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+int               steps;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+int               width;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+int               height;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+int               numberofAgents;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+int               numberofExits;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+int               seed;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+agent[]           agents;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+Exit[]            EmergencyExits;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+IRepresentation[] c;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+JTextField        seedTextField;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>  </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+// this function is called to simulate without visualization. It is used to
+find the best Representation</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+@Override</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+public double getResult(IRepresentation[] candidates) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+// read config from xml file</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+steps = Integer.parseInt(getProperties().get(&quot;steps&quot;).getValue());</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+width = Integer.parseInt(getProperties().get(&quot;width&quot;).getValue());</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+height = Integer.parseInt(getProperties().get(&quot;height&quot;).getValue());</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+seed =
+Integer.parseInt(getProperties().get(&quot;seedforEmergencyExits&quot;).getValue());</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+c = candidates;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+double Fitness = 0;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+for (int s = seed; s &lt; seed + 10; s++) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+setupField(s);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+Fitness += calcSim();</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+return (Fitness / 10);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>  </span><span
+style='font-size:10.0pt;font-family:"Courier New"'>} </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:10.0pt;font-family:"Courier New"'> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:10.0pt;font-family:"Courier New"'>  WhiteBoard
+whiteboard;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:10.0pt;font-family:"Courier New"'>  Display   
+display;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:10.0pt;font-family:"Courier New"'>  </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:10.0pt;font-family:"Courier New"'>  @Override</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size:10.0pt;font-family:"Courier New"'>  </span><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>public void
+replayWithVisualization(IRepresentation[] candidates) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+c = candidates;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+// read config from xml file</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+width = Integer.parseInt(getProperties().get(&quot;width&quot;).getValue());</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+height = Integer.parseInt(getProperties().get(&quot;height&quot;).getValue());</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+seed = Integer.parseInt(getProperties().get(&quot;seedforEmergencyExits&quot;).getValue());</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+display = new Display(840, 695, &quot;EmergencyExit&quot;);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+display.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+whiteboard = new WhiteBoard(600, 600, width, height, 1);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+whiteboard.addColorToScale(0, Color.WHITE);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+// you can decide whether to take images or colors to represent things on the
+whiteboard</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+//whiteboard.addColorToScale(1, Color.BLACK);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+whiteboard.addImageToScale(1, &quot;Components\\Problems\\EmergencyExit\\agent.png&quot;);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+//whiteboard.addColorToScale(2, Color.GREEN);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+whiteboard.addImageToScale(2,
+&quot;Components\\Problems\\EmergencyExit\\EmergencyExit.png&quot;);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+JButton minusbutton = new JButton(&quot;&lt;--&quot;);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+JButton plusbutton = new JButton(&quot;--&gt;&quot;);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+seedTextField = new JTextField(&quot;&quot; + seed);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+seedTextField.setPreferredSize(new Dimension(50, 20));</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+JButton startButton = new JButton(&quot;Change seed&quot;);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+display.add(whiteboard);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+display.add(minusbutton);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+display.add(plusbutton);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+display.add(seedTextField);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+display.add(startButton);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+minusbutton.addActionListener(new ActionListener() {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+@Override</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+public void actionPerformed(ActionEvent e) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+if (steps &gt; 0) steps--;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+setupField(seed);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+double Fitness = calcSim();</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+displayResult();</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+int agentsleft = 0;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+for (agent a&nbsp;: agents) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+if (!a.hasReachedExit) agentsleft++;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+String FitnessString = String.format(&quot;%.2f&quot;, Fitness);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+display.setTitle(&quot;Emergency Exit    Step: &quot; + steps + &quot;  
+Fitness: &quot; + FitnessString + &quot;  Number of Agents left: &quot; +
+agentsleft);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+});</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+plusbutton.addActionListener(new ActionListener() {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+@Override</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+public void actionPerformed(ActionEvent e) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+steps++;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+setupField(seed);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+double Fitness = calcSim();</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+displayResult();</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+int agentsleft = 0;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+for (agent a&nbsp;: agents) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+if (!a.hasReachedExit) agentsleft++;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+String FitnessString = String.format(&quot;%.4f&quot;, Fitness);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+display.setTitle(&quot;Emergency Exit    Step: &quot; + steps + &quot;  
+Fitness: &quot; + FitnessString + &quot;  Number of Agents left: &quot; +
+agentsleft);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+});</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+startButton.addActionListener(new ActionListener() {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+@Override</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>      public
+void actionPerformed(ActionEvent e) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+steps = 0;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+seed = Integer.parseInt(seedTextField.getText());</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+setupField(seed);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+double Fitness = calcSim();</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+displayResult();</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+int agentsleft = 0;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+for (agent a&nbsp;: agents) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+if (!a.hasReachedExit) agentsleft++;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+String FitnessString = String.format(&quot;%.4f&quot;, Fitness);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+display.setTitle(&quot;Emergency Exit    Step: &quot; + steps + &quot;  
+Fitness: &quot; + FitnessString + &quot;  Number of Agents left: &quot; +
+agentsleft);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+});</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+display.setVisible(true);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+setupField(seed);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+double Fitness = calcSim();</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+displayResult();</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+int agentsleft = 0;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+for (agent a&nbsp;: agents) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+if (!a.hasReachedExit) agentsleft++;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+String FitnessString = String.format(&quot;%.4f&quot;, Fitness);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+display.setTitle(&quot;Emergency Exit    Step: &quot; + steps + &quot;  
+Fitness: &quot; + FitnessString + &quot;  Number of Agents left: &quot; +
+agentsleft);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>  }</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>  </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+/**</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>  
+* Displays the result of the last Simulation</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>  
+*/</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+private void displayResult() {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+int[][] data = new int[width][height];</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+for (int x = 0; x &lt; width; x++) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+for (int y = 0; y &lt; height; y++) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+data[x][y] = 0;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+for (agent a&nbsp;: agents) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+data[a.xpos][a.ypos] = 1;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+for (Exit e&nbsp;: EmergencyExits) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+data[e.xpos][e.ypos] = 2;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+whiteboard.setData(data);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+whiteboard.repaint();</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>  }</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+void setupField(int s) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+// read config from xml file</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+numberofAgents /**/= Integer.parseInt(getProperties().get(&quot;NumberofAgents&quot;).getValue());</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+numberofExits /* */=
+Integer.parseInt(getProperties().get(&quot;NumberofEmergencyExits&quot;).getValue());</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+numberofAgents /**/= Math.min(numberofAgents, Math.max(width, height));</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+numberofExits /* */= Math.min(numberofExits, width * height);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+agents /*        */= new agent[numberofAgents];</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+EmergencyExits /**/= new Exit[numberofExits];</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+// it is important to reset the Representation. Otherwise there would sometimes
+be simulation mistakes because the Representation wouldn't start from the same
+seed</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+c[0].reset();</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+// create the agents and place them in a straight line from the upper left to
+the lower right corner</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+for (int i = 0; i &lt; agents.length; i++) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+agents[i] = new agent(c[0].clone(), (i + 1) * width / (agents.length + 1), (i +
+1) * height / (agents.length + 1), false);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+Random positionGenerator = new Random(s);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+for (int i = 0; i &lt; EmergencyExits.length; i++) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+EmergencyExits[i] = new Exit();</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+boolean PositionExistsAlready = false;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+do {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+EmergencyExits[i].xpos = positionGenerator.nextInt(width);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+EmergencyExits[i].ypos = positionGenerator.nextInt(width);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+PositionExistsAlready = false;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+for (int j = 0; j &lt; i; j++) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+if (EmergencyExits[i].xpos == EmergencyExits[j].xpos &amp;&amp;
+EmergencyExits[i].ypos == EmergencyExits[j].ypos) PositionExistsAlready = true;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+} while (PositionExistsAlready);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>  }</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>  </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+/**</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>  
+* Calculates one Simulation whit a certain amount of steps, which has to be
+defined before calling this method</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>  
+* </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>  
+* @return Returns the negative Sum of the distances between the agents and the
+Emergency Exit</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>  
+*/</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+double calcSim() {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+for (int step = 0; step &lt; steps; step++) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+for (int i = 0; i &lt; agents.length; i++) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+agent a = agents[i];</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+if (!a.hasReachedExit) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+Exit nearestExit = EmergencyExits[0];</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+double minimumDistance = Math.sqrt(Math.pow(EmergencyExits[0].xpos - a.xpos, 2)
++ Math.pow(EmergencyExits[0].ypos - a.ypos, 2));</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+for (int e = 0; e &lt; EmergencyExits.length; e++) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+double Distance = Math.sqrt(Math.pow(EmergencyExits[e].xpos - a.xpos, 2) +
+Math.pow(EmergencyExits[e].ypos - a.ypos, 2));</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+if (Distance &lt; minimumDistance) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>             
+minimumDistance = Distance;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>             
+nearestExit = EmergencyExits[e];</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>        
+</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+// input[0] .. horizontal distance between the agent and the nearest Emergency
+Exit</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+// input[1] .. vertical distance between the agent and the nearest Emergency
+Exit</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+// input[2] .. field north      of the agent is occupied</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+// input[3] .. field north-east of the agent is occupied</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+// input[4] .. field east       of the agent is occupied</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+// input[5] .. field south-east of the agent is occupied</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+// input[6] .. field south      of the agent is occupied</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+// input[7] .. field south-west of the agent is occupied</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+// input[8] .. field west       of the agent is occupied</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+// input[9] .. field north-west of the agent is occupied</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+// determine which fields around the agent are occupied by another agent</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+boolean northoccupied /**/= false;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+boolean northeastoccupied = false;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+boolean eastoccupied /* */= false;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+boolean southeastoccupied = false;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+boolean southoccupied /**/= false;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+boolean southwestoccupied = false;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+boolean westoccupied /* */= false;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+    boolean northwestoccupied = false;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+for (int j = 0; j &lt; agents.length; j++) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+agent ag = agents[j];</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+if (!ag.hasReachedExit) { // If a agent has reached the Emergency Exit he
+cannot occupy a field</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+  if (a.xpos /**/== ag.xpos &amp;&amp; a.ypos - 1 == ag.ypos) northoccupied
+/**/= true;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>             
+if (a.xpos + 1 == ag.xpos &amp;&amp; a.ypos - 1 == ag.ypos) northeastoccupied =
+true;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>             
+if (a.xpos + 1 == ag.xpos &amp;&amp; a.ypos /**/== ag.ypos) eastoccupied /* */=
+true;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>             
+if (a.xpos + 1 == ag.xpos &amp;&amp; a.ypos + 1 == ag.ypos) southeastoccupied =
+true;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>             
+if (a.xpos /**/== ag.xpos &amp;&amp; a.ypos + 1 == ag.ypos) southoccupied /**/=
+true;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>             
+if (a.xpos - 1 == ag.xpos &amp;&amp; a.ypos + 1 == ag.ypos) southwestoccupied =
+true;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>             
+if (a.xpos - 1 == ag.xpos &amp;&amp; a.ypos /**/== ag.ypos) westoccupied /* */=
+true;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>             
+if (a.xpos - 1 == ag.xpos &amp;&amp; a.ypos - 1 == ag.ypos) northwestoccupied =
+true;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>      
+   Vector&lt;Float&gt; input = new Vector&lt;Float&gt;();</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+input.add((float) (nearestExit.xpos - a.xpos));</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+input.add((float) (nearestExit.ypos - a.ypos));</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+input.add(northoccupied /**/? 1.0f&nbsp;: 0.0f);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+input.add(northeastoccupied&nbsp;? 1.0f&nbsp;: 0.0f);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+input.add(eastoccupied /* */? 1.0f&nbsp;: 0.0f);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+input.add(southeastoccupied&nbsp;? 1.0f&nbsp;: 0.0f);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+input.add(southoccupied /**/? 1.0f&nbsp;: 0.0f);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+input.add(southwestoccupied&nbsp;? 1.0f&nbsp;: 0.0f);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+input.add(westoccupied /* */? 1.0f&nbsp;: 0.0f);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+input.add(northwestoccupied&nbsp;? 1.0f&nbsp;: 0.0f);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+// output[0] .. horizontal velocity of the agent</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+// output[1] .. vertical velocity of the agent</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+Vector&lt;Float&gt; output = a.representation.getOutput(input);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+// the elements of output are float values between 0.0 and 1.0</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+// for the simulation it is useful to format these values so that you can see
+what each value means</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+float xVfloat = output.get(0).floatValue() * 2.0f - 1.0f;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+float yVfloat = output.get(1).floatValue() * 2.0f - 1.0f;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+int xVelocity = Math.round(xVfloat); // -1 .. move one field in negative
+horizontal direction</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>                                             
+ //  0 .. do not move in any horizontal direction</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>                                              
+//  1 .. move one field in positive horizontal direction</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+int yVelocity = Math.round(yVfloat); // -1 .. move one field in negative
+vertical direction</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>                                              
+//  0 .. do not move in any vertical direction</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>                                              
+//  1 .. move one field in positive vertical direction</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+// move the agent (only if the place, that he wants to move is not occupied by
+another agent)</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+if /*   */(xVelocity == 0/* */&amp;&amp; yVelocity ==
+-1/**/&amp;&amp;&nbsp;!northoccupied /**/&amp;&amp; /*                 
+*/a.ypos &gt; 0) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+a.xpos += 0;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+a.ypos += -1;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+} else if (xVelocity == 1/* */&amp;&amp; yVelocity ==
+-1/**/&amp;&amp;&nbsp;!northeastoccupied &amp;&amp; a.xpos &lt; width - 1
+&amp;&amp; a.ypos &gt; 0) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+a.xpos += 1;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+a.ypos += -1;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+} else if (xVelocity == 1/* */&amp;&amp; yVelocity == 0/*
+*/&amp;&amp;&nbsp;!eastoccupied /* */&amp;&amp; a.xpos &lt; width - 1) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+a.xpos += 1;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+a.ypos += 0;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+} else if (xVelocity == 1/* */&amp;&amp; yVelocity == 1/*
+*/&amp;&amp;&nbsp;!southeastoccupied &amp;&amp; a.xpos &lt; width - 1
+&amp;&amp; a.ypos &lt; height - 1) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+a.xpos += 1;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+a.ypos += 1;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+} else if (xVelocity == 0/* */&amp;&amp; yVelocity == 1/*
+*/&amp;&amp;&nbsp;!southoccupied /**/&amp;&amp; /*                  */a.ypos
+&lt; height - 1) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+a.xpos += 0;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+a.ypos += 1;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+} else if (xVelocity == -1/**/&amp;&amp; yVelocity == 1/*
+*/&amp;&amp;&nbsp;!southwestoccupied &amp;&amp; a.xpos &gt; 0 /*   
+*/&amp;&amp; a.ypos &lt; height - 1) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+a.xpos += -1;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+a.ypos += 1;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+} else if (xVelocity == -1/**/&amp;&amp; yVelocity == 0/*
+*/&amp;&amp;&nbsp;!westoccupied /* */&amp;&amp; a.xpos &gt; 0/*    */) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+a.xpos += -1;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+a.ypos += 0;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+} else if (xVelocity == -1/**/&amp;&amp; yVelocity ==
+-1/**/&amp;&amp;&nbsp;!northwestoccupied &amp;&amp; a.xpos &gt; 0 /*   
+*/&amp;&amp; a.ypos &gt; 0) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+a.xpos += -1;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+a.ypos += -1;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+for (int n = 0; n &lt; EmergencyExits.length &amp;&amp;&nbsp;!a.hasReachedExit;
+n++) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+if (a.xpos == EmergencyExits[n].xpos &amp;&amp; a.ypos ==
+EmergencyExits[n].ypos) a.hasReachedExit = true;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>           
+else /*                                                                
+*/a.hasReachedExit = false;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+double Fitness = 0;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+for (agent a&nbsp;: agents) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+double minimumDistance = Math.sqrt(Math.pow(EmergencyExits[0].xpos - a.xpos, 2)
++ Math.pow(EmergencyExits[0].ypos - a.ypos, 2));</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+for (int e = 0; e &lt; EmergencyExits.length; e++) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+double Distance = Math.sqrt(Math.pow(EmergencyExits[e].xpos - a.xpos, 2) +
+Math.pow(EmergencyExits[e].ypos - a.ypos, 2));</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+if (Distance &lt; minimumDistance) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>         
+minimumDistance = Distance;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>       
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+Fitness += -minimumDistance / Math.sqrt(Math.pow(width, 2) + Math.pow(height,
+2));</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+return (Fitness / numberofAgents);</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>  }</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>  </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+public class agent {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+public IRepresentation representation;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+public int             xpos;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+public int             ypos;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>    public
+boolean         hasReachedExit;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+/**</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>    
+* @param r Representation for this Agent</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>    
+* @param x defines the x position of this Agent</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>    
+* @param y defines the y position of this Agent</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>    
+*/</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+public agent(IRepresentation r, int x, int y, boolean reachedExit) {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>     
+</span><span lang=FR style='font-size:10.0pt;font-family:"Courier New"'>representation
+= r;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=FR style='font-size:10.0pt;font-family:"Courier New"'>     
+xpos = x;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=FR style='font-size:10.0pt;font-family:"Courier New"'>     
+ypos = y;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=FR style='font-size:10.0pt;font-family:"Courier New"'>      </span><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>hasReachedExit =
+reachedExit;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>  }</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>  </span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+public class Exit {</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>   
+</span><span lang=FR style='font-size:10.0pt;font-family:"Courier New"'>public
+int xpos;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=FR style='font-size:10.0pt;font-family:"Courier New"'>   
+public int ypos;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=FR style='font-size:10.0pt;font-family:"Courier New"'>  </span><span
+lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>}</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>}</span></p>
+
+<p class=MsoNormal style='line-height:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman","serif"'>The main changes
+are that there are more than one agent and also more than on emergency exits.
+The agents are distributed over the field in a straight line from the upper
+left to the lower right corner of the field. The emergency exits are
+distributed by random with a seed. It also shows that the same connection of
+input and output should be able to start with different starting conditions and
+nevertheless to find the exit for all agents. This is done by adding a loop to
+getResult() which changes the starting seed of setupField(). </span></p>
+
+<p class=MsoNormal style='line-height:normal'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman","serif"'>The respective
+xml-File for the extended problem is</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+&lt;properties&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>        &lt;entry
+key=&quot;steps&quot; type=&quot;INT&quot; value=&quot;50&quot;/&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>        &lt;entry
+key=&quot;width&quot; type=&quot;INT&quot; value=&quot;20&quot;/&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>        &lt;entry
+key=&quot;height&quot; type=&quot;INT&quot; value=&quot;20&quot;/&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>        &lt;entry
+key=&quot;seedforEmergencyExits&quot; type=&quot;INT&quot;
+value=&quot;0&quot;/&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>        &lt;entry
+key=&quot;NumberofAgents&quot; type=&quot;INT&quot; value=&quot;10&quot;/&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>        &lt;entry
+key=&quot;NumberofEmergencyExits&quot; type=&quot;INT&quot;
+value=&quot;5&quot;/&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>        &lt;entry
+key=&quot;NumberofBlockades&quot; type=&quot;INT&quot;
+value=&quot;20&quot;/&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>        &lt;entry
+key=&quot;NumberofEvaluations&quot; type=&quot;INT&quot;
+value=&quot;10&quot;/&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'>        &lt;entry
+key=&quot;Filename&quot; type=&quot;FILE&quot;
+value=&quot;Components\Problems\EmergencyExit\Stadium.ser&quot;/&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New"'> 
+&lt;/properties&gt;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

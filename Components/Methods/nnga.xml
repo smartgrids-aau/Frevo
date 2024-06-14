@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+	<config>
+		<entry key="author" type="STRING"
+			value="Andreas Pfandler, Istvan Fehervari" />
+		<entry key="version" type="STRING" value="1.51" />
+		<entry key="classdir" type="STRING" value="nnga/nnga" />
+		<entry key="classname" type="STRING" value="nnga.NNGA" />
+		<entry key="name" type="STRING" value="NNGA Classic" />
+		<entry key="description" type="STRING"
+			value="A genetic algorithm designed to evolve any kind of representation. Supports multiple populations and several ranking systems." />
+		<entry key="image" type="STRING" value="nnga.png" />
+		<entry key="tags" type="STRING" value="evolutionary" />
+	</config>
+	<properties>
+		<propentry key="populationsize" type="INT" value="50"
+			description="Size of a population." />
+		<propentry key="populationnumber" type="INT" value="1"
+			description="Number of parallel populations." />
+		<propentry key="generations" type="INT" value="200"
+			description="Number of generations." />
+		<propentry key="percentage_elite" type="FLOAT" value="0.15f"
+			description="Percentage of elite candidates in the whole population." />
+		<propentry key="percentage_random" type="FLOAT"
+			value="0.10f"
+			description="Percentage of randomly selected candidates in the next population." />
+		<propentry key="percentage_mutate" type="FLOAT"
+			value="0.40f"
+			description="Percentage of mutated candidates in the next population." />
+		<propentry key="percentage_renew" type="FLOAT" value="0.05f"
+			description="Percentage of randomly generated candidates in the next population." />
+		<propentry key="percentage_xover" type="FLOAT" value="0.30f"
+			description="Percentage of new candidates created by recombination in the next population." />
+		<propentry key="interXover_frequency" type="INT" value="10"
+			description="Number of generations between inter-population crossovers. 0 means no crossover between populations." />
+		<propentry key="mutationMethod" type="INT" value="1"
+			description="The index of the default mutation method to be used." />
+		<propentry key="mutationseverity" type="FLOAT" value="0.3f"
+			description="Severity of the mutations during evolution." />
+		<propentry key="mutationprobability" type="FLOAT" value="1f"
+			description="Probability that a mutation occurs during evolution." />
+		<propentry key="xoverMethod" type="INT" value="1"
+			description="The index of the default recombination method to be used." />
+		<propentry key="saveinterval" type="INT" value="0"
+			description="Indicates after how many generations should a saving occur. 0 means only last generation." />
+		<propentry key="saveImprovements" type="BOOLEAN"
+			value="true"
+			description="Saves generations where an improvement took place." />
+	</properties>
+</icomponent>

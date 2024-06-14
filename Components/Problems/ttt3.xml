@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zion SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+  <config>
+    <entry key="classdir" type="STRING" value="ttt3/ttt3"/>
+    <entry key="classname" type="STRING" value="ttt3.ttt3"/>
+	<entry key="name" type="STRING" value="Tic Tac Toe 3x3"/>
+	<entry key="description" type="STRING" value="A game for two players, blue and red, who take turns marking the spaces in a 3x3 grid, usually red going first. The player who succeeds in placing three respective marks in a horizontal, vertical or diagonal row wins the game."/>
+	<entry key="image" type="STRING" value="ttt3.png"/>
+	<entry key="tags" type="STRING" value="game"/>
+  </config>
+  <properties>
+  </properties>
+  <requirements>
+    <reqentry key="inputnumber" type="INT" value="9"/>
+	<reqentry key="outputnumber" type="INT" value="9"/>
+	<reqentry key="minimumCandidates" type="INT" value="2"/>
+    <reqentry key="maximumCandidates" type="INT" value="2"/>
+  </requirements>
+</icomponent>

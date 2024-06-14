@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE frevo SYSTEM "..//IComponent.dtd">
+
+<icomponent>
+	<config>
+		<entry key="author" type="STRING"
+			value="Istvan Fehervari, Wilfried Elmenreich" />
+		<entry key="version" type="STRING" value="1.13a" />
+		<entry key="classdir" type="STRING" value="CAM/cam" />
+		<entry key="classname" type="STRING" value="cam.Cam" />
+		<entry key="name" type="STRING" value="Cam" />
+		<entry key="description" type="STRING"
+			value="Cellular automaton morphogenesis. A cellular automaton whose control is evolved by the system. The fitness is determined by the state after several simulation steps.&lt;br&gt;&lt;br&gt;If the parameter &lt;i&gt;bestsolutionOutOfNSteps&lt;/i&gt; is enabled, the best solution within the defined fitness steps defines the fitness.&lt;br&gt;&lt;br&gt;Otherwise, the parameter &lt;i&gt;fitness_steps&lt;/i&gt; determines, how many system states are taken into account for the fitness evaluation, thus forcing to evolve a more stable solution.&lt;br&gt;The &lt;i&gt;smartFitnessModel&lt;/i&gt; defines if pixels on edges are getting more weight." />
+		<entry key="image" type="STRING" value="cam.png" />
+		<entry key="tags" type="STRING" value="cellular automata" />
+	</config>
+	<properties>
+		<propentry key="inputmodel" type="ENUM"
+			value="COLOR_OUTPUT_V_NEUMANN" enumName="cam.InputModel"
+			description="Sets what type of inputs should a cell receive each timestep. Moore and Von Neumann neighborhoods are considered." />
+		<propentry key="bestsolutionOutOfNSteps" type="BOOLEAN"
+			value="false" />
+		<propentry key="smartFitnessModel" type="BOOLEAN"
+			value="true" />
+		<propentry key="simulation_steps" type="INT" value="20" />
+		<propentry key="fitness_steps" type="INT" value="1" />
+		<propentry key="picture" type="FILE"
+			value="Components\Problems\CAM\austria-flag 6x9.png" />
+		<propentry key="istorroid" type="BOOLEAN" value="false" />
+		<propentry key="1-of-C" type="BOOLEAN" value="false" />
+	</properties>
+	<requirements>
+		<reqentry key="inputnumber" type="INT" value="8" />
+		<reqentry key="outputnumber" type="INT" value="5" />
+		<reqentry key="minimumCandidates" type="INT" value="1" />
+		<reqentry key="maximumCandidates" type="INT" value="1" />
+	</requirements>
+</icomponent>

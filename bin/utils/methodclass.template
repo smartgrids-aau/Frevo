@@ -1,0 +1,54 @@
+package PACKAGENAME;
+
+import java.util.ArrayList;
+import java.util.Hashtable;
+
+import org.dom4j.Document;
+
+import utils.NESRandom;
+import core.AbstractMethod;
+import core.AbstractRepresentation;
+import core.ComponentXMLData;
+import core.ProblemXMLData;
+import core.XMLFieldEntry;
+
+public class TEMP extends AbstractMethod {
+
+	/**
+	 * Constructor for this optimization method
+	 * @param random is used to create consistent results every time the optimization is started
+	 */
+	public TEMP(NESRandom random) {
+		super(random);
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * Runs the optimization method 
+	 * @param problemData defines the problem class and its configuration
+	 * @param representationData defines the representation class and its configuration
+	 * @param rankingData defines the ranking class and its configuration
+	 * @param properties the configuration of the optimizer
+	 */
+	@Override
+	public void runOptimization(ProblemXMLData problemData,
+			ComponentXMLData representationData, ComponentXMLData rankingData,
+			Hashtable<String, XMLFieldEntry> properties) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/** Load representations from a results XML doc object. The representations are arranged as a list of populations where each
+	 * population is represented as a list of representations (or solutions). 
+	 * <p>
+	 * If the loading takes considerable amount of time it is advised to provide visual feedback to the user. This can be done by calling the
+	 * {@link main.FrevoMain#setLoadingProgress(float)} method.
+	 * @param doc The source {@link org.dom4j.Document} to be used for loading the representations.
+	 * @return A 2D array of <tt>AbstractRepresentations</tt> loaded from the source document.*/
+	@Override
+	public ArrayList<ArrayList<AbstractRepresentation>> loadFromXML(Document doc) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
