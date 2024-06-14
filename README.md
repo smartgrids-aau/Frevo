@@ -51,5 +51,5 @@ FREVO is primarily developed using Eclipse (www.eclipse.org). The Eclipse projec
 
 ## Licensing
 
-From Version 1.5 on this software is licensed as open source under the Apache License 2.0. Please find further information in `LICENSE`.
+From Version 1.5 on this software is licensed as open source under the Apache License 2.0. Please find further information in the file `LICENSE`.
 
